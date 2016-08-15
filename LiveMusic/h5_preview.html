@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<title></title>
+	<link rel="stylesheet" href="./h5_preview_files/music.css">
+	<script src="./js/jquery2.1.4.min.js"></script>
+	<script src="./js/live_min.js"></script>
+		 <!--<link rel="stylesheet" href="../css/music.min.css"> -->
+</head>
+	<body>
+		<section class="view_page page_review" style="display:none">
+			<div class="loading"></div>
+		</section>
+
+		<section class="page_preview" style="display:block">
+		<!--播放区 开始-->
+		<section class="mod_play">
+			<div class="pic">
+				<img src="./h5_preview_files/live_poster.jpg">
+				<span class="btn_play">
+					<i></i>
+				</span>
+				<!--22日前 会员 开始-->
+				<div class="btn btn_book">
+					<i class="mark_discount">限时优惠</i>
+					会员价16元 立即购买
+				</div>
+				<!--22日前 会员 结束-->
+			</div>
+			<div class="mod_aboard">
+				<span data-action="login_change" class="login_change">
+					<span class="avatar"><img src="./h5_preview_files/login_avatar.png"></span>
+					<span class="txt_01">你有5张电子票</span>
+				</span>
+				<ul class="option">
+					<li class="item">
+						<a href="javascript:;" class="btn">查看</a>
+						<a href="javascript:;" class="btn">赠票</a>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="bar">
+				<span data-action="login_change" class="login_change">
+					<span class="avatar"><img src="http://mat1.gtimg.com/v/cms_concert/0.1.1/web/img/login_avatar.png"></span>
+					<span class="login">点此登录</span>
+				</span>
+				<span class="share" data-action="share">分享</span>
+			</div>
+			<div class="v_info"><i class="txv_logo"></i><em class="red">直播未开始</em>已有65454人成功预定直播</div> -->
+		</section>
+		<!--播放区 结束-->
+		<!--预定区 开始-->
+		<section class="mod mod_book">
+			<div class="tips">
+				<i class="ico_ad"></i>
+				<div class="title_inner">距离 4月16日 20:00 直播开始还有</div>
+				<div class="ad_pic"></div>
+			</div>
+			<div class="time" id="mod-countdown">
+				<em class="font_0 grey"></em>
+				<em class="font_0 grey"></em>
+				<span></span>
+				<em class="font_0 grey"></em>
+				<em class="font_0 grey"></em>
+				<span></span>
+				<em class="font_0 grey"></em>
+				<em class="font_0 grey"></em>
+				<span></span>
+				<em class="font_0 grey"></em>
+				<em class="font_0 grey"></em>
+			</div>
+			<div class="time_n">
+				<span>DAYS</span>
+				<span>HOURS</span>
+				<span>MINUTES</span>
+				<span>SECONDS</span>
+			</div>
+			
+			<div class="price_txt">原价30元（<i class="icon_film"></i>会员25元）立即开通<i class="icon_arrow_gray"></i></div>
+			<!--22日前 非会员 开始-->
+			<div class="btn btn_book">
+				<i class="mark_discount">限时优惠</i>
+				20元 立即购买
+			</div>
+			<!--22日前 非会员 结束-->
+
+			<!--海外不能点 开始-->
+			<div class="btn btn_book_disabled">
+				<i class="mark_discount">限时优惠</i>
+				20元 立即购买
+			</div>
+			<!--海外不能点 结束-->
+
+
+			<!--22日前 会员 开始-->
+			<div class="btn btn_book">
+				<i class="mark_discount">限时优惠</i>
+				会员价16元 立即购买
+			</div>
+			<!--22日前 会员 结束-->
+
+			<!--22日到25日 非会员 开始-->
+			<div class="btn btn_book">
+				<i class="mark_discount">限时优惠</i>
+				30元 立即购买
+			</div>
+			<!--22日到25日 非会员 开始-->
+
+			<!--22日到25日 会员 开始-->
+			<div class="btn btn_book">
+				<i class="mark_discount">限时优惠</i>
+				会员价24元 立即购买
+			</div>
+			<!--22日到25日 会员 开始-->
+
+			<div class="btn btn_book" data-action="book-ticket" style="display:none">我的电子票</div>
+
+			<div class="mod_aboard">
+				<span data-action="login_change" class="login_change">
+					<span class="avatar"><img src="./h5_preview_files/login_avatar.png"></span>
+					<span class="txt_01">你有5张电子票</span>
+				</span>
+				<ul class="option">
+					<li class="item">
+						<a href="javascript:;" class="btn">查看</a>
+						<a href="javascript:;" class="btn">赠票</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="mod_aboard">
+				<span data-action="login_change" class="login_change">
+					<span class="avatar"><img src="./h5_preview_files/login_avatar.png"></span>
+					<span class="txt_02">该帐号还未购买直播，点击头像可切换帐号</span>
+				</span>
+			</div>
+
+			<div class="mod_aboard">
+				<span data-action="login_change" class="login_change">
+					<span class="avatar"><img src="./h5_preview_files/login_avatar.png"></span>
+					<span class="login">登录</span>
+				</span>
+				<span class="share" data-action="share">登录后,  可查看你的电子票</span>
+			</div>
+
+			<div class="discount_info" style="display:none;">
+				<span>VIP内场</span><span>神秘后台</span><span>360全景 多个视角任你选</span>
+			</div>
+
+		</section>
+		<!--预定区 结束-->
+		<!--真爱粉丝榜 开始-->
+		<section class="mod mod_fanstop">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>真爱粉丝榜</span>
+					<p>距榜单截止还有: 00天20时35分2秒</p>
+				</div>
+				<span class="btn_refresh active"><i></i>刷新</span>
+			</div>
+			<div class="mod_bd">
+				<ul class="fanslist">
+					<li class="item top1">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>1</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span><span class="count">2000</span></p>
+							<p><i class="icon_gift"></i><span class="gift">签名专辑+签名海报+明信片+爆炸熊</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+					<li class="item top2">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>2</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span><span class="count">2000</span></p>
+							<p><i class="icon_gift"></i><span class="gift">签名CD+签名照片+签名海报</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+					<li class="item top3">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>3</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span><span class="count">2000</span></p>
+							<p><i class="icon_gift"></i><span class="gift">签名CD+签名照片+签名海报</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+					<li class="item normal me">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>4</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span></p>
+							<p><span class="count">2000</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+					<li class="item normal">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>5</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span></p>
+							<p><span class="count">2000</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+					<li class="item normal">
+						<div class="avatar"><img src="./h5_preview_files/p_04.jpg"><em>6</em></div>
+						<div class="detail">
+							<p><span class="name">G?Dragon</span></p>
+							<p><span class="count">2000</span></p>
+						</div>
+						<div class="btn btn_mid btn_kick">踢榜</div>
+					</li>
+				</ul>
+				<ul class="proplist">
+					<li class="item">
+						<div class="pic"><img src="./h5_preview_files/prop.png"></div>
+						<div class="detail">
+							<p><span class="name">为你星动</span><span class="moods">+1000人气</span></p>
+							<p><i class="icon_Diamond"></i><span class="price">1200(会员1000)</span></p>
+						</div>
+						<div class="btn btn_mid">赠送<em>100</em></div>
+					</li>
+					<li class="item">
+						<div class="pic"><img src="./h5_preview_files/prop.png"></div>
+						<div class="detail">
+							<p><span class="name">为你星动</span><span class="moods">+1000人气</span></p>
+							<p><i class="icon_Diamond"></i><span class="price">1200(会员1000)</span></p>
+						</div>
+						<div class="btn btn_mid">赠送<em>10</em></div>
+					</li>
+					<li class="item">
+						<div class="pic"><img src="./h5_preview_files/prop.png"></div>
+						<div class="detail">
+							<p><span class="name">为你星动</span><span class="moods">+1000人气</span></p>
+							<p><i class="icon_Diamond"></i><span class="price">1200(会员1000)</span></p>
+						</div>
+						<div class="btn btn_mid">赠送<em>8</em></div>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+		<!--真爱粉丝榜 结束-->
+		<!--大礼包-->
+		<section class="mod mod_gift">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>购V.I.P大礼包 得实体周边</span>
+					<em>已有1650000份支持</em>
+				</div>
+			</div>
+			<div class="mod_bd">
+				<div class="gift">
+					<img src="./h5_preview_files/gift.png">
+				</div>
+				<div class="gift_function">
+					<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="btn btn_check">查看我的礼包</a>
+					<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="btn btn_support">继续支持BIGBANG</a>
+				</div>
+			</div>
+		</section>
+		<!--大礼包 结束-->
+		<!--炫迈兑好礼 开始-->
+		<section class="mod mod_stridegift">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>炫迈兑好礼</span>
+				</div>
+			</div>
+			<div class="mod_bd">
+				<div class="stridegift_area">
+					<input class="stridegift_input" type="text" value="" placeholder="请输入兑换码兑换直播观看权">
+					<a href="javascript:;" class="btn btn_stridegift">抽奖</a>
+				</div>
+				<div class="stridegift_txt">活动规则及兑换方式&gt;</div>
+			</div>
+		</section>
+		<!--炫迈兑好礼 结束-->
+		<!--列表 开始-->
+		<section class="mod mod_list" id="mod-music">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>安可曲你来定</span>
+					<img class="title_logo" src="./h5_preview_files/pepsi_logo.png">
+				</div>
+			</div>
+			<div class="mod_bd">
+				<div class="item">
+					<a href="javascript:;" class="icon mv"></a>
+					<a href="javascript:;" class="icon audio"></a>
+					<span class="name">Anyone Else But You</span>
+					<div class="btn btn_mid btn_vote on"><i>+1</i></div>
+					<span class="count">92116</span>
+				</div>
+				<div class="item">
+					<a href="javascript:;" class="icon mv"></a>
+					<a href="javascript:;" class="icon audio"></a>
+					<span class="name">Anyone Else But You</span>
+					<div class="btn btn_mid btn_vote">投票</div>
+					<span class="count">92116</span>
+				</div>
+				<div class="item">
+					<a href="javascript:;" class="icon mv"></a>
+					<a href="javascript:;" class="icon audio"></a>
+					<span class="name">Anyone Else But You</span>
+					<div class="btn btn_mid btn_vote">投票</div>
+					<span class="count">92116</span>
+				</div>
+				<div class="item">
+					<a href="javascript:;" class="icon mv"></a>
+					<a href="javascript:;" class="icon audio"></a>
+					<span class="name">Anyone Else But You</span>
+					<div class="btn btn_mid btn_vote selected">投票</div>
+					<span class="count">92116</span>
+				</div>
+				<div class="item">
+					<a href="javascript:;" class="icon mv"></a>
+					<a href="javascript:;" class="icon audio"></a>
+					<span class="name">Anyone Else But You</span>
+					<div class="btn btn_mid btn_vote on"><i>+1</i></div>
+					<span class="count">92116</span>
+				</div>
+			</div>
+		</section>
+		<!--列表 结束-->
+
+		<!--饭团 开始-->
+		<section class="mod mod_barbox">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>企鹅饭团</span>
+				</div>
+			</div>
+			<div class="mod_bd">
+			</div>
+		</section>
+		<!--饭团 结束-->
+
+		<!--相关视频 开始-->
+		<section class="mod mod_v_list mod_related">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>BIGBANG MV</span>
+				</div>
+			</div>
+			<div class="mod_bd">
+				<section class="scroll-box event-scroll-box">
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellarrrr</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!--相关视频 结束-->
+		<!--回顾 开始-->
+		<section class="mod mod_v_list mod_preview">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>LIVE MUSIC回顾</span>
+				</div>
+			</div>
+			<div class="mod_bd">
+				<section class="scroll-box event-scroll-box">
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+					<div class="video_item">
+						<div class="pic">
+							<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#"><img src="./h5_preview_files/p_03.jpg"></a>
+						</div>
+						<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="m_title">Interstellar</a>
+						<h3 class="s_title">FANS MEETING MEETING演唱会</h3>
+					</div>
+				</section>
+			</div>
+		</section>
+		<!--回顾 结束-->
+
+		<!--全民超神 开始-->
+		<section class="mod mod_ad">
+			<div class="mod_hd">
+				<div class="title_inner">
+					<span>全民超神 BIGBANG 手机开黑全球首秀</span>
+				</div>
+			</div>
+			<div class="mod_bd">
+				<div class="img">
+					<a href="http://moba.qq.com/cp/a20151016bbzbm/?ADTAG=qqmusic.m.link.a20151016bbzb">
+						<img src="./h5_preview_files/ad_banner.jpg">
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--全民超神 结束-->
+
+		<section class="footer">
+			<div class="feedback"><i class="icon_fb"></i>意见反馈</div>
+			<div class="img"><img src="./h5_preview_files/footer.png"> </div>
+			<div class="copyright"><p>Copyright ? 1998 - 2015 Tencent. All Rights Reserved. </p><p>腾讯公司 版权所有</p></div>
+		</section>
+		</section>
+
+
+		<section class="view_page_outer">
+
+			<!--浮层遮罩 开始-->
+			<div class="pop_mask" style="display:none;"></div>
+			<!--浮层遮罩 结束-->
+
+			<!--送道具浮层四个 开始-->
+			<section class="pop_prop send style_four" style="display: none">
+				<em class="close"></em>
+				<h2>送<em>为你心动</em>给<em>BIGBANG</em></h2>
+				<button type="button" class="btn">送1</button>
+				<button type="button" class="btn">送10</button>
+				<button type="button" class="btn">送22</button>
+				<button type="button" class="btn">送99</button>
+			</section>
+			<!--送道具浮层四个 结束-->
+			<!--送道具浮层五个 开始-->
+			<section class="pop_prop send style_five" style="display: none">
+				<em class="close"></em>
+				<h2>送<em>为你心动</em>给<em>BIGBANG</em></h2>
+				<button type="button" class="btn">送1</button>
+				<button type="button" class="btn">送10</button>
+				<button type="button" class="btn">送22</button>
+				<button type="button" class="btn">送99</button>
+				<button type="button" class="btn all">全部送出 100</button>
+			</section>
+			<!--送道具浮层五个 结束-->
+			<!--购买道具 开始-->
+			<section class="pop_prop buy" style="display: none">
+				<em class="close"></em>
+				<div class="propitem">
+					<div class="pic"><img src="./h5_preview_files/prop.png"></div>
+					<div class="detail">
+						<p><i class="icon_Diamond"></i><span class="price">1000</span></p>
+						<p><span class="name">为你星动</span><span class="moods">+1000人气</span></p>
+					</div>
+				</div>
+				<ul class="count">
+					<li><button type="button" class="btn">5个<em>95折</em></button></li>
+					<li><button type="button" class="btn on">20个<em>9折</em></button></li>
+					<li><button type="button" class="btn">50个<em>85折</em></button></li>
+					<li><button type="button" class="btn">100个<em>8折</em></button></li>
+				</ul>
+				<div class="handle_button active">
+					<em class="sub disabled"><i>-</i></em>
+					<span>1</span>
+					<em class="add"><i>+</i></em>
+				</div>
+				<div class="purse">
+					<div class="my_purse">我的钱包：<i class="icon_Diamond"></i>658<i class="icon_v"></i>0</div>
+				</div>
+				<div class="pay">
+					<input type="text" class="input_txt" placeholder="50000">
+					<button type="button" class="btn btn_orange">充值</button>
+				</div>
+			</section>
+			<!--购买道具 结束-->
+
+			<!--踢榜-有道具时 开始-->
+			<section class="pop_prop kick" style="display: none">
+				<em class="close"></em>
+				<h2>再送1590人气即可超越第3名！</h2>
+				<div class="consume">
+					<span>需要消耗</span>
+					<ul>
+						<li>为你星动  x3</li>
+						<li>真爱如钻  x5</li>
+						<li>爱心花环  x100</li>
+						<li><i class="icon_Diamond"></i>540 </li>
+					</ul>
+				</div>
+				<div class="purse">
+					<div class="my_purse">我的钱包：<i class="icon_Diamond"></i>658<i class="icon_v"></i>0</div>
+				</div>
+				<div class="pay">
+					<button type="button" class="btn btn_gray">算了 忍忍</button>
+					<button type="button" class="btn btn_orange">有钱任性</button>
+				</div>
+			</section>
+			<!--踢榜-有道具时 结束-->
+
+			<!--踢榜-无道具时 开始-->
+			<section class="pop_prop kick" style="display: none">
+				<em class="close"></em>
+				<h2>再送1590人气即可超越第3名！</h2>
+				<div class="consume">
+					<span>需要消耗</span>
+					<ul>
+						<li><i class="icon_Diamond"></i>540 </li>
+					</ul>
+					<div class="msg"><i class="icon_error"></i>余额不足，请充值 </div>
+				</div>
+				<div class="purse">
+					<div class="my_purse">我的钱包：<i class="icon_Diamond"></i>658<i class="icon_v"></i>0</div>
+				</div>
+				<div class="pay">
+					<button type="button" class="btn btn_gray">算了 忍忍</button>
+					<button type="button" class="btn btn_orange">充值</button>
+				</div>
+			</section>
+			<!--踢榜-无道具时 结束-->
+
+			<!--购买成功 开始-->
+			<section class="pop_prop buy_success" style="display: none">
+				<em class="close"></em>
+				<h2>恭喜你！成功购买100个 为你星动！</h2>
+				<p>马上送给<span class="white">BIGBANG</span></p>
+				<div class="pay">
+					<button type="button" class="btn btn_gray">稍后再说</button>
+					<button type="button" class="btn btn_orange">立即赠送</button>
+				</div>
+			</section>
+			<!--购买成功 结束-->
+
+			<!--键盘 开始-->
+			<section class="pop_prop keyboard">
+				<em class="close"></em>
+				<p>请输入购买道具个数</p>
+				<ul>
+					<li class="active">1</li>
+					<li>2</li>
+					<li>2</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li><i class="icon_delete"></i></li>
+					<li>0</li>
+					<li class="confirm">确认</li>
+				</ul>
+			</section>
+			<!--键盘 结束-->
+
+			<!--赠送道具 开始-->
+			<div class="send_finish">
+				<div class="prop_pic"><i>+100</i><img src="./h5_preview_files/prop.png"></div>
+				<div class="txt">
+					<p class="txt_1">胜利应援团北京粉丝会<em class="gray">送给</em></p>
+					<p class="txt_2"><em class="orange">BIGBANG</em>100个为你星动</p>
+					<em class="icon_star star_1"></em>
+					<em class="icon_star star_2"></em>
+					<em class="icon_star star_3"></em>
+				</div>
+				<div class="btn_item">
+					<button type="button" class="btn btn_gray">返回</button>
+					<button type="button" class="btn btn_orange">告诉全世界</button>
+				</div>
+
+			</div>
+			<!--赠送道具 结束-->
+
+			<!--名次上升遮罩层 开始-->
+			<div class="ranking_mask_outer">
+				<div class="pop ranking_mask">
+					<div class="ranking_tit">
+						<h2>
+							<i>正在超越</i>
+							太阳欧巴应援会
+						</h2>
+					</div>
+					<div class="ranking_info">
+						<div class="ranking_person ranking_fisrt">
+							<i class="icon_rrrow movedown"></i>
+							<div class="count"><em>4</em></div>
+							<div class="person_info">
+								<img src="./h5_preview_files/person1.png" alt="">
+								<p>
+									<span class="person_name">太阳欧巴</span>
+									<span class="ranking_count">1600</span>
+								</p>
+							</div>
+						</div>
+						<div class="ranking_person ranking_second">
+							<i class="icon_rrrow moveup"></i>
+							<div class="count"><em>999+</em></div>
+							<div class="person_info">
+								<img src="./h5_preview_files/person2.png" alt="">
+								<p>
+									<span class="person_name">胜利应援团</span>
+									<span class="ranking_count">2000</span>
+								</p>
+							</div>
+							<em class="icon_star star_1"></em>
+							<em class="icon_star star_2"></em>
+							<em class="icon_star star_3"></em>
+						</div>
+					</div>
+				</div>
+				<div class="btn_item">
+					<button type="button" class="btn btn_gray">返回</button>
+					<button type="button" class="btn btn_orange">告诉全世界</button>
+				</div>
+			</div>
+			<!--名次上升遮罩层 结束-->
+
+			<!--电子票浮层 开始-->
+			<!-- <div class="pop ticket">
+				<div class="ad"><img src="http://mat1.gtimg.com/v/cms_concert/0.1.1/mob/img/pop_ad.png"></div>
+				<div class="close"></div>
+				<h2>李荣浩“天生李荣浩”巡演上海站</h2>
+				<p class="book">已有 <em class="orange">123679</em> 人预定直播</p>
+				<a href="#" class="hollywood orange"><i class="icon_vip"></i>开通会员，享高清直播、道具打折></a>
+				<ul class="info">
+					<li><em>时间：</em><span>2015年3月21日 20：00</span></li>
+					<li><em>区域：</em><span>VIP包房60号</span></li>
+				</ul>
+			</div>
+			<div class="pop ticket vip">
+				<div class="ad"><img src="http://mat1.gtimg.com/v/cms_concert/0.1.1/mob/img/pop_ad.png"></div>
+				<div class="close"></div>
+				<div class="light"></div>
+				<h2>BIGBANG 2015世界巡演澳门站</h2>
+				<p class="book">已有 <em class="red">123679</em> 人预定直播</p>
+				<p class="time">2015年3月21日 20：00</p>
+				<p class="position"><em>VIP包房</em><span class="red">60号</span></p>
+			</div> -->
+			<div class="pop pop_ticket_v2">
+				<div class="ticket_logo">
+					<img src="./h5_preview_files/ad2.png">
+				</div>
+				<div class="close"></div>
+				<h2>李荣浩“天生李荣浩”巡演上海站</h2>
+				<p class="ticket_time">
+					<span class="label">时间：</span><span class="time">2015年3月21日 20：00</span>
+				</p>
+				<p class="book">已有 <em class="orange">123679</em> 人预定直播</p>
+				<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="hollywood"><i class="icon_vip"></i>开通会员，享高清直播、道具打折&gt;</a>
+				<div class="info">
+					<div class="ticket_hint">
+						<i class="icon_checked"></i><span class="hl">预订成功! </span>将在直播前15分钟提醒
+					</div>
+				</div>
+			</div>
+			<div class="pop pop_ticket_v2 pop_ticket_vip_v2">
+				<div class="ticket_logo">
+					<img src="./h5_preview_files/ad2.png">
+				</div>
+				<div class="close"></div>
+				<h2>李荣浩“天生李荣浩”巡演上海站</h2>
+				<p class="ticket_time">
+					<span class="label">时间：</span><span class="time">2015年3月21日 20：00</span>
+				</p>
+				<p class="book">已有 <em>123679</em> 人预定直播</p>
+
+				<div class="info">
+					<div class="ticket_hint">
+						<i class="icon_checked"></i><span class="hl">预订成功! </span>将在直播前15分钟提醒
+					</div>
+				</div>
+			</div>
+
+			<!--电子票浮层 结束-->
+			<!--提示浮层 开始-->
+			<div id="mod-roll-fail" class="pop prize_pop" style="display: none">
+				<div class="close"></div>
+				<h2>只有先预定直播才能参与抽奖哦~</h2>
+				<h3>预定后不仅能参与抽奖，还能收到直播提醒， 避免错过精彩演出！</h3>
+				<div class="face"></div>
+				<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" data-action="book-follow">点此预定直播</a>
+			</div>
+			<!--提示浮层 结束-->
+			<!--中奖浮层 开始-->
+			<div class="pop prize_pop get" id="mod-roll-success" style="display: none">
+				<div class="close"></div>
+				<h2 class="tit_gx">恭喜抽中<span id="mod-roll-prize"></span>一个！</h2>
+				<div class="item"><label><em>*</em>姓名：</label><input id="mod-roll-name" type="text" class="input"> </div>
+				<div class="item"><label><em>*</em>电话：</label><input id="mod-roll-phone" type="text" class="input"> </div>
+				<h4>请填写您的相关信息，以便工作人员联系您颁奖</h4>
+				<div class="btn_item">
+					<input type="button" class="btn submit" value="提交信息">
+					<input type="button" class="btn cancel" value="放弃领奖">
+				</div>
+			</div>
+			<!--中奖浮层 结束-->
+
+			<!--赠票 开始-->
+			<section class="pop_prop popup_handsel" style="display: none" id="pop1">
+				<em class="close"></em>
+					<div class="handsel_hd">
+						<p class="item"><strong class="name">胖胖小熊</strong>你有5张电子票，</p>
+						<p class="item">可赠送<em class="str">4</em>张!</p>
+					</div>
+
+					<div class="handsel_bd">
+						<div class="handle_button active">
+							<em class="sub disabled"><i>-</i></em>
+							<span><input type="tel" value="1"></span>
+							<em class="add"><i>+</i></em>
+							<p class="notice">输入错误 最多可送4张 <a href="javascript:;">继续购买&gt;</a></p>
+						</div>
+						<a href="javascript:;" class="btn">赠送</a>
+					</div>
+			</section>
+			<!--赠票 结束-->
+
+			<!--查看电子票 开始-->
+			<section class="pop_prop popup_ticket" style="display: none" id="pop2">
+				<em class="close"></em>
+				<div class="handsel_hd">
+					<p class="item"><strong class="name">胖胖小熊</strong>你有5张电子票，</p>
+					<p class="item">可赠送<em class="str">4</em>张!</p>
+				</div>
+				<span class="str_tips">电子票来源：购买3张，抢到3张，已赠送1张</span>
+				<div class="mod_ticket">
+					<div class="ad"><img src="./h5_preview_files/ad2.png"></div>
+					<h2>林俊杰《时线：新地球世界巡回演唱会》- 高雄站</h2>
+					<!-- <p class="book">已有 <em class="orange">123679</em> 人预定直播</p> -->
+					<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="hollywood orange"><i class="icon_vip"></i>开通会员，享高清直播、道具打折&gt;</a>
+					<ul class="info">
+						<li><em>时间：</em><span>2015年3月21日 20：00</span></li>
+						<!-- <li><em>区域：</em><span>VIP包房60号</span></li> -->
+					</ul>
+				</div>
+			</section>
+
+			<section class="pop_prop popup_ticket" style="display: none" id="pop3">
+				<em class="close"></em>
+				<div class="handsel_hd">
+					<p class="item"><strong class="name">胖胖小熊</strong>你有5张电子票，</p>
+					<p class="item">可赠送<em class="str">4</em>张!</p>
+				</div>
+				<span class="str_tips">电子票来源：购买3张，抢到3张，已赠送1张</span>
+				<div class="mod_ticket_vip">
+					<div class="ad"><img src="./h5_preview_files/ad2-2.png"></div>
+					<div class="light"></div>
+					<h2>林俊杰《时现-新地球世界》巡回演唱会-高雄站</h2>
+					<p class="book">已有 <em class="red">123679</em> 人预定直播</p>
+					<p class="time">2015年3月21日 20：00</p>
+					<p class="position"><em>VIP包房</em><span class="red">60号</span></p>
+				</div>
+			</section>
+			<!--查看电子票 结束-->
+
+			<!--购买电子票 开始-->
+			<section class="pop_prop popup_handsel popup_handsel_pay" style="display: none" id="pop4">
+				<em class="close"></em>
+					<div class="handsel_hd">
+						<div class="item_account">
+							<a href="javascript:;" class="avatar"><img src="./h5_preview_files/avatar.png"></a>
+							<h5 class="tit"><span class="name">胖胖小熊胖胖小熊</span>你有10张电子票</h5>
+							<span class="tips">点击头像可切换账号</span>
+						</div>
+						<div class="item_price">￥30</div>
+					</div>
+
+					<div class="handsel_bd">
+						<div class="handle_button active">
+							<em class="sub disabled"><i>-</i></em>
+							<span><input type="text" value="1"></span>
+							<em class="add"><i>+</i></em>
+						</div>
+						<a href="javascript:;" class="btn">确认支付</a>
+						<p class="notice">处理异常 请稍后尝试</p>
+					</div>
+			</section>
+			<!--购买电子票 结束-->
+
+			<!--赠票分享层 开始-->
+			<div class="pop share_ticket" style="display:none" id="pop5"></div>
+			<!--赠票分享层 结束-->
+
+			<!--领取电子票浮层 开始-->
+			<section class="pop_prop popup_geticket" style="display: none" id="pop6">
+				<em class="close"></em>
+				<div class="popup_inner">
+					<p class="item"><span class="str">胖胖小熊</span> 送你<br>1张“林俊杰演唱会”电子票!</p>
+					<a href="javascript:;" class="btn btn_geticket">领取</a>
+				</div>
+			</section>
+			<!--领取电子票浮层 结束-->
+
+			<!--确认账号 开始-->
+			<section class="pop_prop popup_account" style="display: none" id="pop7">
+				<em class="close"></em>
+				<div class="popup_inner">
+					<div class="avatar_wrap">
+						<img src="./h5_preview_files/avatar.png">
+						<span class="str">Mt. Mograph</span>
+					</div>
+					<a href="javascript:;" class="btn btn_account">使用这个账号</a>
+
+					<fieldset class="slice_tit">
+						<legend class="str">使用其他账号登录</legend>
+					</fieldset>
+
+					<ul class="list_account">
+						<li class="item"><a href="javascript:;" class="btn btn_wechat">微信</a></li>
+						<li class="item"><a href="javascript:;" class="btn btn_qq">QQ</a></li>
+					</ul>
+				</div>
+			</section>
+			<!--确认账号 结束-->
+
+			<!--领取成功 开始-->
+			<section class="pop_prop popup_ticket popup_ticket_success" style="display: none" id="pop8">
+				<em class="close"></em>
+				<div class="handsel_hd">
+					<p class="item">恭喜你获得一张1张</p>
+					<p class="item">“林俊杰演唱会”电子票!</p>
+				</div>
+				<span class="str_tips">可用于在腾讯视频观看演唱会直播和回放</span>
+				<div class="mod_ticket">
+					<div class="ad"><img src="./h5_preview_files/ad2.png"></div>
+					<h2>林俊杰《时线：新地球世界巡回演唱会》- 高雄站</h2>
+					<p class="book">已有 <em class="orange">123679</em> 人预定直播</p>
+					<a href="http://10.123.9.9/tencentvideo_v1/vstyle/mobile/topic/concert/html/h5_preview.html#" class="hollywood orange"><i class="icon_vip"></i>开通会员，享高清直播、道具打折&gt;</a>
+					<ul class="info">
+						<li><em>时间：</em><span>2015年3月21日 20：00</span></li>
+						<!-- <li><em>区域：</em><span>VIP包房60号</span></li> -->
+					</ul>
+				</div>
+				<a href="javascript:;" class="btn btn_play">马上观看</a>
+			</section>
+
+			<section class="pop_prop popup_ticket popup_ticket_success" style="display: none" id="pop9">
+				<em class="close"></em>
+				<div class="handsel_hd">
+					<p class="item">恭喜你获得一张1张</p>
+					<p class="item">“林俊杰演唱会”电子票!</p>
+				</div>
+				<span class="str_tips">可用于在腾讯视频观看演唱会直播和回放</span>
+				<div class="mod_ticket_vip">
+					<div class="ad"><img src="./h5_preview_files/ad2-2.png"></div>
+					<div class="light"></div>
+					<h2>林俊杰《时现-新地球世界》巡回演唱会-高雄站</h2>
+					<p class="book">已有 <em class="red">123679</em> 人预定直播</p>
+					<p class="time">2015年3月21日 20：00</p>
+					<p class="position"><em>VIP包房</em><span class="red">60号</span></p>
+				</div>
+				<a href="javascript:;" class="btn btn_play">马上观看</a>
+			</section>
+			<!--领取成功 结束-->
+
+			<!--领取失败 开始-->
+			<section class="pop_prop popup_ticket_fail" style="display: none" id="pop10">
+				<em class="close"></em>
+				<div class="popup_inner">
+					<div class="fail_hd">
+						<h5 class="notice">很遗憾！你手慢了！很遗憾！你手慢了！很遗憾！你手慢了！很遗憾！你手慢了！很遗憾！你手慢了！很遗憾！你手慢了！</h5>
+						<a href="javascript:;" class="btn btn_buyed">购买电子票</a>
+					</div>
+					<div class="fail_bd">
+						<p class="str">来自<strong class="strong">胖胖小熊</strong> 的100张电子票已被以下小伙伴抢走</p>
+						<ul class="mod_avatar_list">
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+							<li class="list_item">
+								<img src="./h5_preview_files/avatar.png">
+								<span class="name">俊杰啦啦俊杰啦啦</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--领取失败 结束-->
+
+
+			<!-- app 登陆提示 开始-->
+			<section class="pop_prop popup_app_login" style="display: none" id="pop11">
+				<div class="popup_inner">
+					<div class="avatar_wrap">
+						<img src="./h5_preview_files/rpsh.jpg" class="avatar_pic">
+						<span class="str">任平生</span>
+					</div>
+					<div class="login_hint">
+						打开腾讯视频后， <br>
+						请用当前QQ账号登录观看
+					</div>
+				</div>
+			</section>
+			<!--app 登陆提示 结束-->
+
+		</section>
+
+<div class="loading_wrap" style="display:none;">
+	<div class="loading"></div>
+</div>
+
+
+<!-- 横屏提示 开始 -->
+<div class="landscape_wrap">
+	<div class="icon_landscape"></div>
+	<div class="text">为了更好的体验，请使用竖屏浏览</div>
+</div>
+<!-- 横屏提示 结束 -->
+
+<script>
+	var key = window.location.hash.substr(1);
+	if (key) {
+		document.querySelector(".pop_mask").style.display = 'block';
+		document.getElementById(key).style.display = 'block';
+	};
+</script>
+
+
+<!-- CssGaga 160412160244,v_e,334 --></body></html>

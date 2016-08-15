@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simpleModal</title>
+    <script src="jquery2.1.4.min.js"></script>
+    <script src="jquery.simplemodal.1.4.4.min.js"></script>
+    <!--<script src="https://github.com/carhartl/jquery-cookie/blob/master/src/jquery.cookie.js"></script>-->
+    <script src="jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="basic-dialog-warn" style="display: none">
+    <!--普通弹出层开始-->
+    <div class="box-title show"><h2>提示</h2></div>
+    <div class="box-main">
+        <div class="tips">
+            <span class="tips-ico">
+                <span class="ico-warn"><!--图标--></span>
+            </span>
+            <div class="tips-content">
+                <div class="tips-title">系统繁忙,请稍后再试</div>
+                <div class="tips-line"></div>
+            </div>
+        </div>
+        <div class="box-buttons"><button type="button" class="simplemodal-close">关 闭</button> </div>
+    </div>
+    <!--普通弹出层结束-->
+</div>
+用户名：<input type="text" id="username" name="username"><br>
+<input type="checkbox" name="check" id="check">记住用户名
+
+<script>
+      $(function () {
+
+      })
+</script>
+</body>
+</html>

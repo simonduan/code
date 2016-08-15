@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chatroom</title>
+    <script src="jquery2.1.4.min.js"></script>
+    <style>
+        #window{
+            height: 400px;
+            width: 400px;
+            border: 2px solid darkorange;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="window">
+        <p id="messagewindow"><span id="loading">加载中....</span></p>
+    </div>
+    <form id="chat">
+        姓名<input type="text" id="author" size="50"><br>
+        内容<input type="text" id="msg" size="50"><br>
+        <input type="submit" value="发送">
+    </form>
+
+</div>
+<script>
+    function addMessage(xml) {
+        if($(xml).find("status").text() =="2")return;
+        timestmp = $(xml).find("time").text();
+        $(xml).find("message").each(function () {
+            var anthor = $(this).find("author").text();
+            var content = $(this).find("text").text();
+            var newHtml = "<strong>"+ anthor+"</strong>:" + content+"<br>"
+            $("#messagewindow").append(newHtml)
+        })
+    }
+    $(function () {
+        var timestmp = 0
+        $("#chat").submit(function () {
+            if($("#author").val()==""||$("#msg").val() ==""){
+                alert("发送内容不能为空")
+            }else{
+                $.post("chatroom.xml",{
+                    message : $("msg").val(),
+                    name :$("#author").val(),
+                    action:"postmsg",
+                    time:timestmp
+                },function (xml) {
+                    $("#loading").remove()
+                    $("#msg").val("");
+                    addMessage(xml)
+                })
+            }
+
+            return false
+        })
+    })
+
+</script>
+</body>
+</html>

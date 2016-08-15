@@ -1,0 +1,751 @@
+
+<!DOCTYPE HTML>
+<!-- <html>
+    <head>
+        <title></title>
+    </head>
+    <body></body>
+</html> -->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta content="telephone=no" name="format-detection" />
+    <title>腾讯新闻</title>
+    <link rel="dns-prefetch" href="//vm.gtimg.cn">
+    <link rel="dns-prefetch" href="//imgcache.gtimg.cn">
+    <link rel="dns-prefetch" href="//imgcache.qq.com">
+    <link rel="dns-prefetch" href="//qzs.qq.com">
+    <link href="//vm.gtimg.cn/tencentvideo/vstyle/mobile/qqnews/style/mqq_movie.css" rel="stylesheet" type="text/css">
+    <link href="//imgcache.gtimg.cn/tencentvideo_v1/vstyle/mobile/v2/style/player_inews.css?max_age=604800&v=20160712" rel="stylesheet" type="text/css">
+    <script>
+        window.PAGE_CONFIG = {
+            name: 'mqq_t4'
+        }
+    </script>
+    <script type="text/javascript">window.APP_CONFIG={boss_name:"qqnews_video"};</script>
+    <script type="text/javascript">
+        var QosSS=new Object();
+        QosSS.t=new Array([0,0,0,0,0,0,0,0,0,0]);
+        QosSS.t[0]=(new Date()).getTime();
+        QosSS.t[9]=QosSS.t[8]=QosSS.t[7]=QosSS.t[6]=QosSS.t[5]=QosSS.t[4]=QosSS.t[3]=QosSS.t[2]=QosSS.t[1]=QosSS.t[0];
+
+        var domainTestListPre = {"6":{}};
+
+        function getQuery(url, key) {
+            var reg = new RegExp("(^|&|\\?|#)" + key + "=([^&#]*)(&|$|#)", "");
+            var match = url.match(reg);
+            if (match) {
+                return match[2];
+            }
+            return null;
+        };
+
+        function getUserId(){
+            var url = document.location.href;
+            var uin = "";
+            uin = getQuery(url, "uin") != "" ? getQuery(url, "uin") : getCookie("uin");
+
+            if (uin && uin.indexOf("o") == 0) {
+                uin = parseInt(uin.substring(1, uin.length), 10);
+            }
+
+            if(!uin){
+                uin = getQuery(url, "mmuin");
+            }
+            return uin;
+        };
+
+        function getCookie(name) {
+            var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+            if (arr != null) {
+                return unescape(arr[2]);
+            }
+            return null;
+        };
+
+        function isMatchSpeedStatsListPre(start, end){
+            var id = getUserId();
+            if(!id){
+                return false;
+            }
+
+            id = id.toString();
+            var len = id.length;
+            var key = id.substring(len - start, len - end);
+            var obj = domainTestListPre[key];
+
+            if(obj){
+                return true;
+            }else{
+                return false;
+            }
+        };
+
+        function submitSpeedStatsPre(key,value,sOp){
+            if(!isMatchSpeedStatsListPre(3,2)){
+                return;
+            }
+
+            var paramValue = [];
+            paramValue.push("sIp=");
+            var uin = getUserId();
+            paramValue.push("iQQ=" + uin);
+            paramValue.push("sBiz=appnews.front");
+            paramValue.push("sOp=" + sOp);
+            paramValue.push("iSta=0");
+            paramValue.push("iTy=2081");
+            paramValue.push("iFlow=");
+            paramValue.push("sServerIp=");
+            paramValue.push("iTimeUsed=" + value);
+            var img = new Image();
+            img.onload = function() {};
+            img.src = "http://btrace.qq.com/collect?" + paramValue.join('&');
+        };
+    </script>
+    <script>
+        window.APP_CONFIG.pageType = 2
+        window.APP_CONFIG.dateType = 2
+    </script>
+</head>
+<!-- <body></body> -->
+<body>
+<script type="text/javascript">
+    QosSS.t[9]= (new Date()).getTime();
+    submitSpeedStatsPre("2",QosSS.t[9] - QosSS.t[0],"mqqweek_v_body");
+</script>
+
+<div id="news_content">
+
+    <div id="borderLogo"><div class="yingyuan"></div></div>
+
+    <div id="news_h5_search" class="news_video_search"></div>
+
+    <div id="content" class="main fontSize2">
+
+
+
+        <div id="page-content-tag">
+            <h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">刘亦菲刘烨黎明上演最虐四角恋</h1><p class="sub_title_small">《夜孔雀》</p><div href="" class="videoImg" showType="player">
+            <div id="w1735tg2f1c" class="mod_player" index="1" showtype= "small_video" vid="w1735tg2f1c" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/399458214_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">刘亦菲破“仙气”入“红尘”的转型之作，女神一口气遇上刘烨、黎明、余少群三种类型的男神，谈了你一辈子梦寐以求的爱情，讲述一个华裔女孩与三个中国男人跨越两国的三段感情，一会儿是选择纹身的文艺女青年，一会儿是去酒吧热舞的率性女孩，敢作敢当、敢爱敢恨。</p><!--RECOMMENDMOVIE_0--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">黄灿灿携手南笙演绎青涩青春</h1><p class="sub_title_small">《半熟少女》</p><div href="" class="videoImg" showType="player">
+            <div id="f1735c6rxlc" class="mod_player" index="2" showtype= "small_video" vid="f1735c6rxlc" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/397910337_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">“草食男”阿牛担当导演，集结武大校花黄灿灿、网红南笙、敖犬等一大票青春偶像。这个故事里有女汉子与呆萌校草的啼笑初恋，也有学霸乖乖女与双胞胎才子的意乱情迷，他们躁动的热情在循规蹈矩的理智中突围，展现出青春期最纯真的梦想。</p><!--RECOMMENDMOVIE_1--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">赵本山爱徒代班死神让你笑着哭</h1><p class="sub_title_small">《死神的假期》</p><div href="" class="videoImg" showType="player">
+            <div id="z1735bn3159" class="mod_player" index="3" showtype= "small_video" vid="z1735bn3159" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/397910582_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">一部笑中带泪的喜剧片，一部天马行空的“都市狂想曲”。这里有史上最逗逼的死神，最倒霉的男一号，还有最美艳的女一号。赵本山爱徒小沈龙搭档网红左岸潇用生命搞笑，见习“死神CP”踏爆笑囧途。更有混血萌娃，专治不服！</p><!--RECOMMENDMOVIE_2--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">武林群侠神秘穿越大乱斗</h1><p class="sub_title_small">《江湖侠客令之群侠归来》</p><div href="" class="videoImg" showType="player">
+            <div id="y1735etnkre" class="mod_player" index="4" showtype= "small_video" vid="y1735etnkre" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/399460293_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">因时空碎裂，不同武侠世界里的人物穿越到了同一个地方——竖店影视城。他们隐藏在此，卖药材，跑武行，当演员，希望有朝一日重建江湖。83版《射雕》黄药师饰演者曾江这次变成少林扫地僧，台湾著名歌手王子化身神雕侠侣杨过，黄一飞出演老顽童周伯通，大咖云集！</p><!--RECOMMENDMOVIE_3--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">看上仙白子画如何变身渣男</h1><p class="sub_title_small">《情敌蜜月》</p><div href="" class="videoImg" showType="player">
+            <div id="v1736fif5en" class="mod_player" index="5" showtype= "small_video" vid="v1736fif5en" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/397910823_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">“尊上”霍建华和“紫薇格格”刚曝光恋情不久便公布婚讯，老干部爆发十级撩妹功力，堪比宋仲基！不过在电影《情敌蜜月》中，他依旧延续白子画的高冷范儿，化身“渣男”和“暖男”的矛盾体，与权相佑对垒上演爱情保卫战。</p><!--RECOMMENDMOVIE_4--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">英国“贱谍”大战足球流氓</h1><p class="sub_title_small">《王牌贱谍：格林斯比》</p><div href="" class="videoImg" showType="player">
+            <div id="q1735cwvpur" class="mod_player" index="6" showtype= "small_video" vid="q1735cwvpur" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/397911064_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">欧洲杯开幕之前，英国喜剧大咖萨莎-拜伦-科恩用这部电影塑造了“史上最贱英伦足球流氓”，携手特工弟弟马克-斯特朗华丽丽地参与了一场360度全方位无死角的重口味拯救世界之旅，把“间谍”变成了终极“贱谍”。</p><!--RECOMMENDMOVIE_5--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">当绿巨人和卡魔拉相拥而泣</h1><p class="sub_title_small">《永远的北极熊》</p><div href="" class="videoImg" showType="player">
+            <div id="a1736pcv6r4" class="mod_player" index="7" showtype= "small_video" vid="a1736pcv6r4" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/399461523_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">美国才女玛雅-福布斯作为好莱坞为数不多的女导演，执导风格也是剑走偏锋。“绿巨人”饰演者马克-鲁法洛搭档“卡魔拉”女星佐伊-索尔达娜演技爆棚，看患有躁郁症的暖心爸爸如何带着两个女儿找妈妈。</p><!--RECOMMENDMOVIE_6--><h1 class="sub_title" style="/*border-top: 1px solid #d7d7d7;*/">小燕子变导演解青春选择题</h1><p class="sub_title_small">《致我们终将逝去的青春》</p><div href="" class="videoImg" showType="player">
+            <div id="i1735wxqv4w" class="mod_player" index="8" showtype= "small_video" vid="i1735wxqv4w" vtype="on-demand"><img src="http://inews.gtimg.com/newsapp_ls/0/397908092_580326/0" width= "100%" style="display:block;"/></div>
+        </div><p class="text">神仙姐姐和当红小鲜肉组CP的《致青春2》正在热映，令我们回忆起当年赵薇打造的那枚青春催泪炸弹，把校园爱恨情仇收拾得又虐又悲伤，且看“野蛮女友”杨子姗如何扑倒男神赵又廷，成全了他的初恋“袭胸”之旅，而青春那一抹永恒的疼痛，令观众无不嘘唏感叹。</p><!--RECOMMENDMOVIE_7-->
+        </div>
+
+        <!--视频列表-->
+    </div>
+
+    <!-- 影库 -->
+    <div class="videoLibImg" style="display: none;">
+        <div class="videoLibImg_wrap">
+            <img src="http://inews.gtimg.com/newsapp_ls/0/397899542_580290/0">
+        </div>
+        <a class="video_library download" href="" openUrl="tenvideo2://?action=3&home_channel_code=100173&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq">
+            <div class="vl_con">
+                <p class="vl_line1">上万部影视剧大片等你看！</p>
+                <p class="vl_line2">安装腾讯视频</p>
+            </div>
+            <div class="vl_progress"></div>
+        </a>
+    </div>
+    <!-- 影库结束 -->
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+<script language="javascript" type="text/javascript">
+
+    //应用宝下载器开关  Added at 20140731
+    var YYBOpen = '1';
+    //视频渠道号
+    var videoChannel = "000116083139323433323835";
+
+
+    //内容模型
+    var contentModel = {
+        "img_url": "http://inews.gtimg.com/newsapp_ls/0/397899234_640320/0",
+        "img_width": "",
+        "img_height": "",
+        "link": "http://view.inews.qq.com/a/WXN201607070477500G",
+        "desc": "刘亦菲《夜孔雀》首播，黄灿灿携手南笙《半熟少女》免费看。",
+        "title": "腾讯视频：神仙姐姐刘亦菲陷最虐四角恋",
+        "src": "腾讯娱乐"
+    };
+
+    var mobileType = "android";
+    var newsId = "WXN201607070477500G1";
+    var downloadMd5 = "";
+    var downloadUrl = "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1";
+
+    var isPublic = (typeof publicAccount == 'object') ? true : false;
+
+    //Added by keyili at 2014/07/15
+    var newsType = "13";
+
+    // 视频信息
+    // Added by nonysun at 2014/02/12.
+    var videoInfo = {
+        "data": {
+        },
+    };
+
+    // 视频列表
+    var videoList = {
+        "data": {
+            "1" : {
+                "index" : "1", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "会员专享", // 下载文本
+                "openText" : "会员专享", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=w0020xcss49&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=qa470oxx8mvj5s5&demandVersion=2.6.0&from=132&video_id=w0020xcss49&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "会员专享",//关注右侧拉起视频导语
+                "cid" : "qa470oxx8mvj5s5",
+                "vid":"w0020xcss49",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/399458214_580326/0",
+                "small_video": "w1735tg2f1c",
+                "small_video_wording": "刘亦菲突破尺度文艺之作",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "2" : {
+                "index" : "2", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "免费观看", // 下载文本
+                "openText" : "免费观看", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=z002012r9ai&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=mlb0mu3kbprd34z&demandVersion=2.6.0&from=132&video_id=z002012r9ai&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "免费观看",//关注右侧拉起视频导语
+                "cid" : "mlb0mu3kbprd34z",
+                "vid":"z002012r9ai",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/397910337_580326/0",
+                "small_video": "f1735c6rxlc",
+                "small_video_wording": "网红的校园制服诱惑",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "3" : {
+                "index" : "3", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "会员专享", // 下载文本
+                "openText" : "会员专享", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=z00200tcu4i&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=g4p20mtg5sgf6od&demandVersion=2.6.0&from=132&video_id=z00200tcu4i&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "会员专享",//关注右侧拉起视频导语
+                "cid" : "g4p20mtg5sgf6od",
+                "vid":"z00200tcu4i",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/397910582_580326/0",
+                "small_video": "z1735bn3159",
+                "small_video_wording": "见习“死神”爆笑奇遇记",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "4" : {
+                "index" : "4", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "会员专享", // 下载文本
+                "openText" : "会员专享", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=w00204t674s&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=ntdg42ivdibmw89&demandVersion=2.6.0&from=132&video_id=w00204t674s&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "会员专享",//关注右侧拉起视频导语
+                "cid" : "ntdg42ivdibmw89",
+                "vid":"w00204t674s",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/399460293_580326/0",
+                "small_video": "y1735etnkre",
+                "small_video_wording": "古代群侠玩穿越",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "5" : {
+                "index" : "5", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "免费观看", // 下载文本
+                "openText" : "免费观看", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=r0018hay1mn&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=ddtthv9pur8pf63&demandVersion=2.6.0&from=132&video_id=r0018hay1mn&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "免费观看",//关注右侧拉起视频导语
+                "cid" : "ddtthv9pur8pf63",
+                "vid":"r0018hay1mn",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/397910823_580326/0",
+                "small_video": "v1736fif5en",
+                "small_video_wording": "张雨绮权相佑组拆婚联盟",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "6" : {
+                "index" : "6", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "会员专享", // 下载文本
+                "openText" : "会员专享", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=t00209qslf2&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=sbsi1iczwhtq8op&demandVersion=2.6.0&from=132&video_id=t00209qslf2&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "会员专享",//关注右侧拉起视频导语
+                "cid" : "sbsi1iczwhtq8op",
+                "vid":"t00209qslf2",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/397911064_580326/0",
+                "small_video": "q1735cwvpur",
+                "small_video_wording": "逗比兄弟哥俩好",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "7" : {
+                "index" : "7", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "会员专享", // 下载文本
+                "openText" : "会员专享", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=q00205t5wnt&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=eq5v76mvz6uw6qg&demandVersion=2.6.0&from=132&video_id=q00205t5wnt&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "会员专享",//关注右侧拉起视频导语
+                "cid" : "eq5v76mvz6uw6qg",
+                "vid":"q00205t5wnt",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/399461523_580326/0",
+                "small_video": "a1736pcv6r4",
+                "small_video_wording": "绿胖化身暖心老爸",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+            "8" : {
+                "index" : "8", //标示位
+                "downloadUrl" : "http://view.inews.qq.com/newsDownLoad?refer=biznew&src=txvideo_mqqweek&ostype=android&datastr1=WXN201607070477500G1",  //下载地址
+                "downloadMD5" : "",   //apk的MD5
+                "downloadText" : "免费观看", // 下载文本
+                "openText" : "免费观看", // 打开文本
+                "openUrl" : "tenvideo2://?action=5&video_id=y0012rvhay5&demandVersion=2.6.0&from=132&callback=mqq://&sender=qq", //打开链接
+
+                //新增字段
+                "isHasAttention":"1",//0打开不加关注,1打开加关注
+                "attentionOpenUrl":"tenvideo2://?action=1&cover_id=qh4ihwczkxluu3s&demandVersion=2.6.0&from=132&video_id=y0012rvhay5&notice=1&callback=mqq://&sender=qq",//关注链接
+                "attentionOpenText":"加入看单",//关注导语
+                "attentionBannerText" : "在腾讯视频随时观看",//关注下侧banner导语
+                "videoOpenText" : "免费观看",//关注右侧拉起视频导语
+                "cid" : "qh4ihwczkxluu3s",
+                "vid":"y0012rvhay5",
+                "isFree":"1",//0不免费，1免费
+                "openH5Url":"",//打开的html5页面链接
+                "coverImg": "http://inews.gtimg.com/newsapp_ls/0/397908092_580326/0",
+                "small_video": "i1735wxqv4w",
+                "small_video_wording": "赵薇导演处女作",
+                "silent_video": "",
+                "silent_video_wording": ""
+            },
+        },
+    };
+
+    //是否存在视频
+    var isHasVideo = true;
+
+    var movieTicketSwitch = "1";
+</script>
+
+<script src="//open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+<script>
+    if (!window.QQApi && window.mqq) {
+        window.QQApi = window.mqq
+    }
+</script>
+<script type="text/javascript">
+    QosSS.t[3]= (new Date()).getTime();
+    submitSpeedStatsPre("2",QosSS.t[3] - QosSS.t[0],"mqqweek_v_prevjs");
+</script>
+<script>!function(){function noop(){}if(window.q_download){var _listeners=[],_register=window.q_download.registerDownloadCallBackListener,_name="_q_download_delegator";if(window[_name]=function(res){var _args=arguments,_ctx=this;_listeners.forEach(function(fname){var fn=eval(fname);fn&&fn.apply(_ctx,_args)})},window.mqq){var invoke=window.mqq.invoke;mqq.invoke("q_download","registerDownloadCallBackListener",_name),mqq.invoke=function(n,o,e){"q_download"==n&&"registerDownloadCallBackListener"==o?_listeners.push(e):invoke.apply(mqq,arguments)},window.q_download.registerDownloadCallBackListener=function(n){_listeners.push(n)},mqq.app.downloadApp=function(n,o){if(o)try{var e=_name+"_"+n.appid;window[e]=function(e){e instanceof Array||(e=[e]),e.forEach(function(e){e.appid==n.appid&&o(e)})},_listeners.push(e)}catch(a){console.log(a)}window.q_download.doDownloadAction(JSON.stringify(n))}}else window.q_download.registerDownloadCallBackListener(_name),window.q_download.registerDownloadCallBackListener=function(n){_listeners.push(n)}}}();</script>
+<script type="text/javascript" src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_xinwen.js?v=2065666160712&max_age=604800" charset="utf-8"></script>
+<script type="text/javascript" src="//imgcache.qq.com/tencentvideo_v1/js/txv.gettvpconfig.js?v=20160712&max_age=604800" charset="utf-8"></script>
+<script type="text/javascript">QosSS.t[4]= (new Date()).getTime();</script>
+<script>
+    try {
+        var adonendFlag = 1;
+    } catch (e) {
+
+    }
+    var adonStartFlag = 1;
+</script>
+<script type="text/javascript">
+    function createVideoPlayer() {
+        var videoPlayerMinHeight = 215;
+        var divItems = document.querySelectorAll('.mod_player');
+        for (var i=0; i<divItems.length; i++) {
+            var divItem = divItems[i];
+            var vid = divItem.attributes['vid'].nodeValue;
+            var vtype = divItem.attributes['vtype'].nodeValue;
+            if (vtype === "") {
+                vtype = "on-demand";
+            }
+
+            if (!vid || !vtype) {
+                continue;
+            }
+
+            var playerHeight = divItem.scrollHeight;
+            if (playerHeight < videoPlayerMinHeight) {
+                playerHeight = videoPlayerMinHeight;
+            }
+
+            //divItem.style.height = playerHeight + "px";
+
+            // 点播
+            if (vtype === "on-demand") {
+                var video = new tvp.VideoInfo();
+                video.setVid(vid);
+
+                var video_playType = "auto";
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.indexOf("android") >= 0) {
+                    var a = parseFloat(ua.slice(ua.indexOf("android") + 8));
+                    if (a > 3) {
+                        video_playType = "html5";
+                    }
+                }
+
+                var data;
+                if(videoInfo.data){
+                    data = videoInfo.data[vid];
+                }
+                if(divItem.getAttribute("showtype") === "small_video"){
+                    data = videoList.data[divItem.getAttribute("index")];
+                    playerHeight = Math.round((272 / 480 ) * divItem.scrollWidth);
+                }
+
+                video.setPoster(data.coverImg);
+
+                var playerConfig = getTvpConfig({pageType:2,dateType:2});
+
+                QosSS.t[5]= (new Date()).getTime();//视频初始化时间
+
+                var player = new tvp.Player();
+                playerConfig = {
+                    width: "100%",
+                    height: playerHeight,
+                    isHtml5UseUI:true,
+                    pic: data.coverImg,
+                    video: video,
+                    modId: divItem.id,
+                    autoplay: false,
+                    html5ForbiddenUIFeature: ["title","definition"],
+                    appid: 10001,
+                    contentId: newsId,
+                    isiPhoneShowPosterOnPause: false,//视频暂停时停留在当前播放画面
+                    plugins: {
+                        AppBanner: {
+                            openUrl: data.openUrl,
+                            downloadText: data.downloadText,
+                            downloadUrl:playerConfig.AppBannerDownloadUrl,
+                            promotionId:playerConfig.AppBannerPromotionId,
+                            md5:playerConfig.AppBannerMd5,
+                            downloader: true, //是否开启  默认flase
+                            downloaderCallback: "transferDownloadState",//回调函数
+                            range: [2],//1:wechat,2:mqq
+                        },
+                        AppRecommend: {
+                            promotionId : playerConfig.AppRecommendPromotionId,
+                            md5 : playerConfig.AppRecommendMd5,
+                            downloadUrl : playerConfig.AppRecommendDownloadUrl,
+                            downloader: true, //是否开启  默认flase
+                        },
+                        AppFollow:{
+                            //新增参数  Added by keyili at 2014/07/15
+                            openFollow:data.isHasAttention,
+                            followOpenUrl:data.attentionOpenUrl,
+                            videoText:data.videoOpenText,
+                            bannerText:data.attentionBannerText,
+                            cid:data.cid,
+                            vid:data.vid,
+                            pay:data.isFree == "0" ? "1" : "0",
+                            h5Url:data.openH5Url,
+                            openUrl:data.openUrl,
+                            downloadText:data.downloadText,
+                            openText:data.openText,
+                            downloadUrl:playerConfig.AppBannerDownloadUrl,
+                            promotionId:playerConfig.AppBannerPromotionId,
+                            md5:playerConfig.AppBannerMd5,
+                            downloader: true,
+                            downloaderCallback: "transferDownloadState",
+                            range: [2],
+                        }
+                    },
+                    oninited:function(){QosSS.t[6]= (new Date()).getTime();setTimeout(function(){checkSubmitSpeedStats();},1000);}
+                };
+                if(divItem.getAttribute("showtype") === "small_video"){
+                    playerConfig.shortVideoOpenUrl = data.openUrl
+                    playerConfig.isShortVideo = false;//标记是短视频
+                    playerConfig.longVideoID = data.vid;//短视频对应的长视频id
+                    playerConfig.isContinuePlay = false;//是否续播
+                    playerConfig.plugins.AppFollow.isHideBannerTips = true;//屏蔽播放器关注按钮下方的关注。。。。banner
+                    playerConfig.html5ForbiddenUIFeature =  ['controlbar', 'title', 'definition'];
+                    // playerConfig.plugins.AppRecommend = false;//关闭小视频的结束推荐
+                    // if (!window.$autoplayVideos) {
+                    //     window.$autoplayVideos = []
+                    // }
+                    // window.$autoplayVideos.push({
+                    //     container: divItem,
+                    //     player: player
+                    // })
+                }else{
+                    try {
+                        var loadingadChid = ''
+                        var logotype = '13'
+                        switch(logotype) {
+                            case '13':
+                                loadingadChid = 'yingyuan'
+                                break
+                            case '14':
+                                loadingadChid = 'reying'
+                                break
+                            case '15':
+                                loadingadChid = 'jingdian'
+                                break
+                            case 'yingshizongyi':
+                                loadingadChid = 'zongyi'
+                                break
+                            case 'dianshihuangjindang':
+                                loadingadChid = 'dianshihuangjindang'
+                                break
+                        }
+                        // 前贴广告
+                        if(adonStartFlag){
+                            playerConfig.isHtml5ShowLoadingAdOnStart = true;
+                            playerConfig.loadingadAutoplay = false;
+                            playerConfig.isSkipLoadingAd = true;
+                            playerConfig.skipLoadingAdTime = 5;
+                            playerConfig.loadingadChid = loadingadChid;
+                        }
+                        // 后贴广告
+                        if (adonendFlag) {
+                            playerConfig.coverId = "";
+                            playerConfig.plugins.adonend = {
+                                newstp: loadingadChid // 长视频后贴广告
+                            }
+                        }
+                    } catch (e) {
+
+                    }
+                }
+                // console.log(playerConfig);
+                player.create(playerConfig);
+            }
+
+            // 直播
+            if (vtype === "alive") {
+                var video = new tvp.VideoInfo();
+                video.setChannelId(vid);
+
+                var player = new tvp.Player();
+                player.create({
+                    width: divItem.scrollWidth,
+                    height: playerHeight,
+                    type: 1,
+                    video: video,
+                    modId: mydivItem.id,
+                    autoplay: false,
+                    plugins: {
+                        AppBanner: true
+                    }
+                });
+            }
+        }
+    }
+    createVideoPlayer();
+</script>
+<!-- 结构化数据 -->
+<script type="text/javascript">
+    !function () {
+        var appdata = window.APP_DATA = {}
+        try {
+            appdata.recommendMovies = {"RECOMMENDMOVIE_0":[{"type":"cover","id":"db2e4g0eyqrenbn","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397924218_340474\/0","title":"\u7b2c\u4e09\u79cd\u7231\u60c5","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397924218_340474\/0","cid":"db2e4g0eyqrenbn","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=db2e4g0eyqrenbn&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=db2e4g0eyqrenbn&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"kqw4s57v8doj3er","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397924115_340474\/0","title":"\u94dc\u96c0\u53f0","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397924115_340474\/0","cid":"kqw4s57v8doj3er","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=kqw4s57v8doj3er&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=kqw4s57v8doj3er&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"zz1nhv1omp71ytb","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923952_340474\/0","title":"\u9732\u6c34\u7ea2\u989c","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923952_340474\/0","cid":"zz1nhv1omp71ytb","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=zz1nhv1omp71ytb&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=zz1nhv1omp71ytb&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_1":[{"type":"cover","id":"oxq0f0u4qwin0ms","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923368_340474\/0","title":"\u6211\u7684\u5c11\u5973\u65f6\u4ee3","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923368_340474\/0","cid":"oxq0f0u4qwin0ms","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=oxq0f0u4qwin0ms&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=oxq0f0u4qwin0ms&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"ar66980gzauwgpe","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923215_340474\/0","title":"\u5b9d\u7c73\u6070\u6070","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923215_340474\/0","cid":"ar66980gzauwgpe","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=ar66980gzauwgpe&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=ar66980gzauwgpe&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"zvipciamna83bi2","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923048_340474\/0","title":"\u65e2\u7136\u9752\u6625\u7559\u4e0d\u4f4f","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397923048_340474\/0","cid":"zvipciamna83bi2","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=zvipciamna83bi2&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=zvipciamna83bi2&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_2":[{"type":"cover","id":"cr2e4sf5dxfcfqu","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922507_340474\/0","title":"\u543b\u6211\u52a0\u4ed9\u6c14","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922507_340474\/0","cid":"cr2e4sf5dxfcfqu","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=cr2e4sf5dxfcfqu&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=cr2e4sf5dxfcfqu&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"6z3zpjhpcfhmy4r","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922243_340474\/0","title":"\u4e52\u4e53\u4fa0","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922243_340474\/0","cid":"6z3zpjhpcfhmy4r","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=6z3zpjhpcfhmy4r&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=6z3zpjhpcfhmy4r&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"27epsbhcqozrghc","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922049_340474\/0","title":"\u975e\u6b63\u5e38\u5973\u53cb","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397922049_340474\/0","cid":"27epsbhcqozrghc","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=27epsbhcqozrghc&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=27epsbhcqozrghc&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_3":[{"type":"cover","id":"xj1mdraf14ty0e9","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921476_340474\/0","title":"\u987f\u609f\u4e4b\u767d\u9aa8\u7f8e\u4eba\u5fc3","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921476_340474\/0","cid":"xj1mdraf14ty0e9","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=xj1mdraf14ty0e9&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=xj1mdraf14ty0e9&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"cl5bubb7sbv1ooz","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921324_340474\/0","title":"\u5927\u5185\u5bc6\u63a2\u738b\u4e8c\u72d7","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921324_340474\/0","cid":"cl5bubb7sbv1ooz","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=cl5bubb7sbv1ooz&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=cl5bubb7sbv1ooz&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"8tguwvzarv8gsd8","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921176_340474\/0","title":"\u9664\u5996\u4f20","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397921176_340474\/0","cid":"8tguwvzarv8gsd8","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=8tguwvzarv8gsd8&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=8tguwvzarv8gsd8&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_4":[{"type":"cover","id":"28ctizbvuggdx9b","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920500_340474\/0","title":"\u8d85\u65f6\u7a7a\u6551\u5175","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920500_340474\/0","cid":"28ctizbvuggdx9b","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=28ctizbvuggdx9b&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=28ctizbvuggdx9b&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"0l1jzsdujcauftb","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920350_340474\/0","title":"\u9b54\u5bab\u9b45\u5f71","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920350_340474\/0","cid":"0l1jzsdujcauftb","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=0l1jzsdujcauftb&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=0l1jzsdujcauftb&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"9jn6attnebfc4ww","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920138_340474\/0","title":"\u4eac\u57ce81\u53f7","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397920138_340474\/0","cid":"9jn6attnebfc4ww","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=9jn6attnebfc4ww&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=9jn6attnebfc4ww&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_5":[{"type":"cover","id":"v42ty657vzz1id4","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919524_340474\/0","title":"\u6cf0\u8fea\u718a","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919524_340474\/0","cid":"v42ty657vzz1id4","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=v42ty657vzz1id4&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=v42ty657vzz1id4&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"zc7p7u8ay6zhnk0","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919364_340474\/0","title":"\u6cf0\u8fea\u718a2","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919364_340474\/0","cid":"zc7p7u8ay6zhnk0","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=zc7p7u8ay6zhnk0&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=zc7p7u8ay6zhnk0&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"s8bw7x2amn5xtsy","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919171_340474\/0","title":"\u5e9f\u67f4\u7279\u5de5","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397919171_340474\/0","cid":"s8bw7x2amn5xtsy","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=s8bw7x2amn5xtsy&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=s8bw7x2amn5xtsy&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_6":[{"type":"cover","id":"6t569opkwtxp6z0","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397918512_340474\/0","title":"\u60ca\u5929\u9b54\u76d7\u56e2","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397918512_340474\/0","cid":"6t569opkwtxp6z0","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=6t569opkwtxp6z0&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=6t569opkwtxp6z0&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"cz2szzeahb8aj1k","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397917179_340474\/0","title":"\u590d\u4ec7\u8005\u8054\u76df","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397917179_340474\/0","cid":"cz2szzeahb8aj1k","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=cz2szzeahb8aj1k&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=cz2szzeahb8aj1k&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"vox06nwx47wuy5t","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397918238_340474\/0","title":"\u6211\u662f\u5c71\u59c6","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397918238_340474\/0","cid":"vox06nwx47wuy5t","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=vox06nwx47wuy5t&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=vox06nwx47wuy5t&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}],"RECOMMENDMOVIE_7":[{"type":"cover","id":"657m7vl2ju8bs42","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397915605_340474\/0","title":"\u91cd\u8fd420\u5c81","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397915605_340474\/0","cid":"657m7vl2ju8bs42","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=657m7vl2ju8bs42&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=657m7vl2ju8bs42&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"atgcyq2an9gsjyn","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397915952_340474\/0","title":"\u5de6\u8033","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397915952_340474\/0","cid":"atgcyq2an9gsjyn","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=atgcyq2an9gsjyn&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=atgcyq2an9gsjyn&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"},{"type":"cover","id":"7pllgr9s2higz2y","img":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397916259_340474\/0","title":"\u8c01\u7684\u9752\u6625\u4e0d\u8ff7\u832b","focus":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/397916259_340474\/0","cid":"7pllgr9s2higz2y","appid":"1000","app_logo":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/12763805\/0","open_intro":"\u6253\u5f00\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","dnld_intro":"\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891\u5ba2\u6237\u7aef","jmp_url_iphone":"tenvideo2:\/\/?action=1&cover_id=7pllgr9s2higz2y&demandVersion=2.6.0&from=132","jmp_url_iphone_old":"tenvideo:\/\/","dnld_url_iphone":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app&ostype=iphone","dnld_url_iphone_share":"http:\/\/view.inews.qq.com\/appDownLoad\/id458318329?refer=biznew&src=txvideo_app_f&ostype=iphone","jmp_url_android":"tenvideo2:\/\/?action=1&cover_id=7pllgr9s2higz2y&demandVersion=2.6.0&from=132","dnld_url_android":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app&ostype=android","dnld_url_android_share":"http:\/\/view.inews.qq.com\/newsDownLoad?refer=biznew&src=txvideo_app_f&ostype=android","pkg_appname_android":"\u817e\u8baf\u89c6\u9891","pkg_name_android":"com.tencent.qqlive","pkg_miniver_android":"2.7.0.5613","btnText_open":"\u6253\u5f00","btnText_dnld":"\u4e0b\u8f7d","btnText_cncrn":"\u5173\u6ce8","btnText_ncncrn":"\u53d6\u6d88\u5173\u6ce8","openVideoBtnText":"\u6253\u5f00","jmp_intro":"\u770b\u66f4\u591a\u89c6\u9891"}]};
+        } catch (e) {
+            console.error(e)
+        }
+        try {
+            appdata.FactivityConf = {"title":"\u4e09\u5f71\u5e1d\u805a\u9996\u300a\u5bd2\u62182\u300b","subtitle":"\u91cd\u71c3\u9999\u6e2f\u8b66\u532a\u7247\u7684\u4fe1\u4ef0\u4e0e\u8363\u5149","imgurl":"http:\/\/inews.gtimg.com\/newsapp_ls\/0\/399463627_690388\/0","url":"http:\/\/cy.qq.com\/p\/caiyun\/1160.html","platform":"1+2"};
+        } catch (e) {
+            console.error(e)
+        }
+    }();
+</script>
+<script src="//imgcache.qq.com/tencentvideo_v1/3party/zepto.js?max_age=86400&v=20150204"></script>
+<script type="text/javascript">QosSS.t[1]= (new Date()).getTime();</script>
+<!-- inject:js --><script type="text/javascript" src="//qzs.qq.com/tencentwap/script/qqnews_movie/qqnews_mqq_5813da.min.js?max_age=2592000"></script><script type="text/javascript" src="//qzs.qq.com/tencentwap/script/qqnews_movie/qqnews_video_components_1c150c.min.js?max_age=2592000"></script><!-- endinject -->
+<script type="text/javascript">QosSS.t[2]= (new Date()).getTime();</script>
+<script>try{window.AppBoot()}catch(e){console.log("AppBoot error:\n",e.message,"\n",e.stack)}window.LegacyBoot();</script>
+
+<!-- 视频搜索 -->
+<link rel="stylesheet" href="//imgcache.gtimg.cn/tencentvideo_v1/vstyle/mobile/v2/style/tvp_search.css?max_age=86400&v=20150316">
+<script type="text/javascript" src="//qzs.qq.com/tencentwap/script/qqnews_movie/qqnews_search_7bfa33.min.js?max_age=2592000"></script>
+<script>!function () {
+    txvsearch({
+        insertId : "news_h5_search",//搜索内容的最外层dom id，视频的搜索插入这个dom中
+        containerId : "news_content"
+    });
+}();</script>
+<script src="//js.aq.qq.com/js/aq_common.js"></script>
+<script type="text/javascript">
+    // 添加统计参数
+    var otherdownload = document.getElementById("otherdownload");
+    if(otherdownload && openAppController.addBossParam) {
+        openAppController.addBossParam(otherdownload);
+    }
+</script>
+<!-- 曝光统计 -->
+<script type="text/javascript">!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.BossStat=e():t.BossStat=e()}(this,function(){return function(t){function e(n){if(o[n])return o[n].exports;var r=o[n]={exports:{},id:n,loaded:!1};return t[n].call(r.exports,r,r.exports,e),r.loaded=!0,r.exports}var o={};return e.m=t,e.c=o,e.p="",e(0)}([function(t,e,o){t.exports=o(1)},function(t,e,o){"use strict";function n(t,e){t=t.split("."),(t.length<3||t.length>5)&&console.warn("按钮名分段数不对，可能会导致数据丢失");var o=d;o+="&s_ptag="+f+"&s_app="+(t[0]||"")+"&s_module="+(t[1]||"")+"&s_behave="+(t[2]||"")+"&s_sub="+(t[3]||"")+"&s_fifth="+(t[4]||""),e&&e.lazy?s.push(o):a(o)}var r,i=o(2),c=o(4),a=o(5),s=o(6);try{r=window.jQuery||window.Zepto||window.tvp&&tvp.$}catch(u){}r&&r(document.body).on("click","[_boss]",function(t){var e=r(t.currentTarget);n(e.attr("_boss"))});var p=window.sessionStorage||{getItem:function(){return""}},f=i.get("ptag")||p.getItem("ptag")||c.get("ptag"),l=i.get("openid")||c.get("openid"),d="http://btrace.qq.com/kvcollect?BossId=3255&Pwd=2118551257&s_url="+encodeURIComponent(location.href.split("?")[0])+"&s_referrer="+encodeURIComponent(document.referrer)+"&s_ua="+navigator.userAgent+"&s_uin="+(c.get("o_cookie")||c.get("uin")||c.get("luin"))+"&s_openid="+l+"&_dc="+Math.random();a(d+"&s_ptag="+f),t.exports={ptag:function(t){f=t},hot:n}},function(t,e,o){"use strict";var n=o(3);t.exports={get:function(t,e){var o=new RegExp("(\\?|#|&)"+t+"=([^&#]*)(&|#|$)");e=e||location.href;var r=e.match(o);return r?n(r[2]):""},del:function(t){var e=new RegExp("(\\?|#|&)"+t+"=([^&#]*)(&|#|$)"),o=location.href.match(e);o=o?o[2]:"";try{window.history&&history.replaceState&&history.replaceState(null,null,location.href.replace(t+"="+o,"i=i"))}catch(n){}}}},function(t,e){var o={"<":"&#60;",">":"&#62;",'"':"&#34;","'":"&#39;","&":"&#38;"},n=function(t){return o[t]};t.exports=function(t){return(""+t).replace(/&(?![\w#]+;)|[<>"']/g,n)}},function(t,e){"use strict";t.exports={set:function(t,e,o,n,r){if(r){var i=new Date,c=new Date;c.setTime(i.getTime()+36e5*r)}return document.cookie=t+"="+e+"; "+(r?"expires="+c.toGMTString()+"; ":"")+(n?"path="+n+"; ":"path=/; ")+(o?"domain="+o+";":"domain="+window.location.host+";"),!0},get:function(t){var e=new RegExp("(?:^|;+|\\s+)"+t+"=([^;]*)"),o=document.cookie.match(e);return o?o[1]:""},del:function(t,e,o){var n=new Date;n.setTime(n.getTime()-1),document.cookie=t+"=; expires="+n.toGMTString()+";"+(o?"path="+o+"; ":"path=/; ")+(e?"domain="+e+";":"domain="+window.location.host+";")}}},function(t,e){"use strict";function o(){}t.exports=function(t){var e=document.createElement("img");e.onerror=o,e.onload=o,e.onabort=o,e.src=t}},function(module,exports,__webpack_require__){for(var cookie=__webpack_require__(4),report=__webpack_require__(5),storage=function(){var t=!1;try{window.localStorage&&(t=!0)}catch(e){}var o=location.hostname||location.host;return t?{get:function(t){return localStorage.getItem(t)},set:function(t,e){return localStorage.setItem(t,e)},clear:function(t){return localStorage.removeItem(t)}}:{get:function(t){return cookie.get(t)},set:function(t,e){return cookie.set(t,e,o)},clear:function(t){return cookie.set(t,"",o)}}}(),reg=/^(?:ht|f)tp(?:s)?\:\/\/(?:[\w\-\.]+)\.\w+/i,k="txv_lazyreport_list",d="|",clear=function(){return storage.clear(k)},shift=function(){var t=storage.get(k);if(!t)return"";var e=t.split(d),o=e.shift();return storage.set(k,e.join(d)),o?decodeURIComponent(o):""},push=function(t){if(t){var e=storage.get(k),o=[];e&&(o=e.split(d)),o.push(encodeURIComponent(t)),storage.set(k,o.join(d))}},reportItem=function(item){if(reg.test(item))try{!!report&&report(item)}catch(e){}else setTimeout(function(){try{eval(item)}catch(e){}},0)},item=shift();item;)reportItem(item),item=shift();module.exports={push:push,clear:clear}}])});</script>
+<script type="text/javascript">!function(){function t(){e&&clearTimeout(e),e=setTimeout(function(){o=o||[].slice.call(document.querySelectorAll(".mod_player")),o.forEach(function(t){if(!t.getAttribute("data-statexpose")){var e=t.getBoundingClientRect(),o=t.getAttribute("vid"),n=document.documentElement.clientHeight;e.top+i>=0&&e.bottom<=n+i&&(t.setAttribute("data-statexpose",!0),BossStat.hot([a.boss_name,c.name,"video_expose",o].join(".")))}})},n)}var e,o,n=200,i=20,a=window.APP_CONFIG||{},c=window.PAGE_CONFIG||{};window.addEventListener("scroll",t),setTimeout(function(){t()})}();</script>
+<script type="text/javascript">
+    var hasSubmitSpeedStats = false;
+    var domainTestList = {
+        "54":{"key":"imgcache","src":"http://imgcache.gtimg.cn"},
+        "44":{"key":"mat1","src":"http://mat1.gtimg.com"},
+        "34":{"key":"view","src":"http://view.inews.qq.com"},
+        "24":{"key":"shortwx","src":"http://short.weixin.qq.com"},
+    };
+
+    var domainTestUrl = "";
+    var domainTestKey = "";
+
+    function checkSubmitSpeedStats(){
+        if(isMatchSpeedStatsList()){
+            if(isHasVideo){
+                if((QosSS.t[6] - QosSS.t[0] != 0 && QosSS.t[8] - QosSS.t[0] != 0) && !hasSubmitSpeedStats){
+                    hasSubmitSpeedStats = true;
+                    submitSpeedStats();
+                }
+            }else{
+                if(QosSS.t[8] - QosSS.t[0] != 0 && !hasSubmitSpeedStats){
+                    hasSubmitSpeedStats = true;
+                    submitSpeedStats();
+                }
+            }
+        }
+    };
+
+    function submitSpeedStats(){
+        QosSS.c = new Image();
+        QosSS.c.onload = (QosSS.c.onerror = function() {delete QosSS.c;});
+
+        var param = [];
+        param.push('type=1');
+        param.push('name=mqqweek_v');
+        if(QosSS.t[2] - QosSS.t[1] != 0){
+            param.push('1=' + (QosSS.t[2] - QosSS.t[1]));
+        }
+        if(QosSS.t[4] - QosSS.t[3] != 0 && isHasVideo){
+            param.push('2=' + (QosSS.t[4] - QosSS.t[3]));
+        }
+        if(QosSS.t[6] - QosSS.t[5] != 0 && isHasVideo){
+            param.push('3=' + (QosSS.t[6] - QosSS.t[5]));
+        }
+        if(QosSS.t[8] - QosSS.t[7] != 0){
+            param.push(domainTestKey + '=' + (QosSS.t[8] - QosSS.t[7]));
+        }
+        QosSS.c.src = "http://qos.report.qq.com/collect?" + param.join('&');
+    };
+
+    function domainSpeedStats(){
+        var obj = isMatchSpeedStatsList();
+        if(!obj){
+            return;
+        }
+
+        domainTestUrl = obj.src;
+        domainTestKey = obj.key;
+
+        var domainTest= new Image();
+        domainTest.onload = (domainTest.onerror = function() {QosSS.t[8]= (new Date()).getTime();checkSubmitSpeedStats();});
+        QosSS.t[7]= (new Date()).getTime();
+        domainTest.src = domainTestUrl;
+    };
+
+    function isMatchSpeedStatsList(){
+        var id = getUserId();
+        if(!id){
+            return false;
+        }
+
+        id = id.toString();
+        var len = id.length;
+        var key = id.substring(len - 3, len - 1);
+        var obj = domainTestList[key];
+
+        if(obj){
+            return obj;
+        }else{
+            return false;
+        }
+    };
+    domainSpeedStats();
+</script>
+</body>
+<!-- </body> -->
+
+</html>

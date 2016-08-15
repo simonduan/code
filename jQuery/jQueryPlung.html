@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery2.1.4.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <!--<script src="http://www.imooc.com/data/jquery.validate.messages_cn.js"></script>-->
+    <script src="vaildate.message_cn.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="jquery.simplemodal.1.4.4.min.js"></script>
+</head>
+    <style type="text/css">
+        *{
+            font-family: Verdana;
+            font-size:96%;
+        }
+        label{
+            width: 10em;
+            float: left;
+        }
+        label.error{
+            float:none;
+            color: red;
+            padding-left: 5em;
+            vertical-align: top;
+        }
+        p{
+            clear: both;
+        }
+        .submit{
+            margin-left: 12em;
+        }
+        em{
+            font-weight: bold;
+            padding-left: 1em;
+            vertical-align: top;
+        }
+    </style>
+<body>
+<form class="cmxform" id="commentForm" method="get" action="http://www.baidu.com">
+    <fieldset>
+        <legend>一个简单的验证带验证提示的评论例子</legend>
+        <p>
+            <label for="cusername">姓名</label><em>*</em>
+            <input id="cusername" name="username" size="25"  minlength="2">
+        </p>
+        <p>
+            <label for="cemail">电子邮件</label><em>*</em>
+            <input id="cemail" name="email" size="25" >
+        </p>
+        <p>
+            <label for="curl">网址</label><em>&nbsp</em>
+            <input id="curl" name="url" size="25"  value="">
+        </p>
+        <p>
+            <label for="ccoment">你的评论</label><em>*</em>
+            <textarea id="ccoment" name="comment" cols="20"></textarea>
+        </p>
+        <p>
+            <label for="cvalcode">验证码</label>
+            <input id="cvalcode" name="valcode" size="25" value="">7+9
+        </p>
+        <p>
+            <input type="submit" class="submit" value="提交">
+        </p>
+
+    </fieldset>
+</form>
+<form id="myForm" method="get" action="#">
+    <input type="text" id="username" name="username"><br>
+    <input type="text" id="content" name="content"><br>
+    <button type="submit">发送</button>
+</form>
+<div style="display: none">
+    提交成功欢迎再来
+</div>
+
+<script>
+        $(function () {
+            $("#commentForm").validate({
+                rules:{
+                    username:{
+                        required:true,
+                        minlength:2
+                    },
+                    email:{
+                        required:true,
+                        email:true
+                    },
+                    url:{
+                        required:true,
+                        url:true
+                    },
+                    comment:"required"
+                },messages:{
+                    username:{
+                        required:"请输入姓名",
+                        minlength:"长度不能小于2"
+                    }
+                }
+
+            });
+
+
+        })
+        var options = {
+
+        }
+        $("#myForm").submit(function () {
+            $(this).ajaxSubmit(function () {
+                $("div").show()
+            })
+            return false
+        })
+        $(function () {
+            $("#myForm").validate({
+                rules:{
+                    username:{
+                        required:true,
+                    },
+                    content:{
+                        required:true
+                    }
+
+                },messages:{
+                    username:{
+                        required:"请输入信息再发送",
+                    },
+                    content:{
+                        required:"请输入信息再发送"
+                    }
+                }
+            })
+
+        })
+
+
+</script>
+
+</body>
+</html>

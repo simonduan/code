@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie</title>
+    <script src="jquery2.1.4.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+<div id="cookie">
+    <label for="username">用户名</label>
+    <input type="text" id="username" value="uaser"><br>
+    <label for="user_value">密码</label>
+    <input type="text" id="user_value" value="11234"><br>
+    <input type="button" id="btn_set" value="设置cookie"><br>
+    <input type="button" id="btn_get" value="获取cookie"><br>
+
+</div>
+<div id="content">
+    <span id="cookieName"></span>
+    <span id="cookieValue"></span>
+</div>
+
+
+<script>
+    var windowsArr = window.length
+//    alert(window.frames.length)
+   var a =  window.open("http://v.qq.com/")
+    alert(a.window.name)
+    $(function () {
+        $("#btn_set").click(function () {
+            user = $("#username").val()
+            user_value = $("#user_value").val()
+            $.cookie(user,user_value),
+            {
+                path:"/",
+                domain:"qq.com"
+            }
+        });
+        $("#btn_get").click(function () {
+            if($.cookie("simonduan") == null){
+                $("#cookieName").text("没有此cookie名")
+            }
+            else if($.cookie("simonduan") ==""){
+                $("#cookieValue").text("cookie value is none")
+            }
+            if ($.cookie("simonduan") !== ""){
+                alert($.cookie("simonduan"))
+            }
+        })
+    })
+
+//    $(function () {
+//        var cookieName = $("#username").attr("id")
+//        var cookieName_value = $("#username").val()
+//
+//        $("#btn_set").click(function () {
+//            $.cookie(cookieName,cookieName_value)
+//            alert( cookieName_value)
+//            return false
+//        });
+//        $("#btn_get").click(function () {
+//            if($.cookie("username" !== null)){
+//                a = $.cookie("username")
+//                $("#cookieName").text("username")
+//                $("#cookieValue").text(":" + a)
+//            }else {
+//                a= "kong"
+//                alert(a)
+//            }
+//        })
+
+//    })
+</script>
+</body>
+</html>

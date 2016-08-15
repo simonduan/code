@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <title>限播效果</title>
+</head>
+<body>
+<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_xinwen.js?maxage=640800&v=2015456" type="text/javascript" ></script>
+
+<div id="mod_player"></div>a
+<p>TIPS:在移动设备的浏览器上会被限播</p>
+<p style="background: red;color:#fff; line-height:30px;text-align:center;" onclick="location.reload();">刷新</p>
+
+<script>
+    tvp.$.getScript('./setting.js?t='+ (+new Date()), function(){
+        tvp.ts="sadasdasdasdas";
+        var video = new tvp.VideoInfo();
+//        video.setVid(tvpSetting.vid_limit);
+        video.setVid("l0171ne1fjx")
+        var player = new tvp.Player();
+        player.create({
+            width  : tvpSetting.width,
+            height : tvpSetting.height,
+            video  : video,
+            playerType: 'html5',
+            modId  : 'mod_player',
+            plugins: {
+                AppBanner: true,
+                AppRecommend:true
+
+            }
+
+        });
+
+    });
+</script>
+</body>
+</html>

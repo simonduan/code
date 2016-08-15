@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery2.1.4.min.js"></script>
+</head>
+<body>
+<form>
+    <input type="button" id="Ajax" value="ajax获取">
+    <div id="resText"></div>
+</form>
+<script>
+    $("#Ajax").click(function () {
+        $("#resText").load("testHtml.html .para",function () {
+            alert(1)
+        })
+    })
+    
+</script>
+</body>
+</html>
