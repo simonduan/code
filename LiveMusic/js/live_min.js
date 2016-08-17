@@ -13,7 +13,7 @@ $(function () {
             "":mad
         },
             cache:true,
-            jsonpCallback: "vingjsonp",
+            // jsonpCallback: "vingjsonp",
             dataType: "jsonp",
             success: function (live_msg) {
                 //-----------------------****精选MV****----------------------------------------------------

@@ -40,9 +40,20 @@
         return (typeof dataArray == "string")
     }
     var date =  Date.now();
-    console.log(date)
-
-
+//    console.log(date)
+    var a = {
+        num1 : "010-12345678",
+        num2 : "(022)12345678",
+        num3  : "02112345678",
+        num4:"021 12345678"
+    }
+    var reg = /\(?0\d{2}[) -]?\d{8}/
+    for(j in a){
+        var b = a[j].toString();
+//        console.log(b)
+        console.log(b.match(reg))
+    }
+//    console.log(num1.match(reg))
 </script>
 </body>
 </html>
