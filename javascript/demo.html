@@ -7,53 +7,25 @@
 </head>
 <body>
 <script>
-
-    $(function () {
-        var newArray = [];
-        $.ajax({
-            type:"get",
-            url:"aaaa.json",
-            dataType:"json",
-            success:function (msg) {
-                var new_Array  = msg.array
-                $.each(new_Array,function (ind,val) {
-                    newArray.push(val)
-                })
-                newArray.sort(compare);
-                newArray.push("aa","bb")
-                console.log(newArray)
-                a= newArray.filter(checkNum)
-//                alert(a)
+    function callSomeFunction(someFunction,args) {
+        return someFunction(args);
+    }
+    function  creatCompar(propertyName) {
+        return function (obj1,obj2) {
+            var val1 = obj1[propertyName];
+            var val2 = obj2[propertyName];
+            if(val1<val2){
+                return -1
+            }else if(val1>val2){
+                return 1
+            }else {
+                return 0
             }
-        })
-    })
-    function compare(value1,value2) {
-        if(value1 < value2){
-            return -1
-        } else  if(value1 > value2){
-            return 1
-        }else {
-            return 0
         }
     }
-    function checkNum(dataArray) {
-        return (typeof dataArray == "string")
-    }
-    var date =  Date.now();
-//    console.log(date)
-    var a = {
-        num1 : "010-12345678",
-        num2 : "(022)12345678",
-        num3  : "02112345678",
-        num4:"021 12345678"
-    }
-    var reg = /\(?0\d{2}[) -]?\d{8}/
-    for(j in a){
-        var b = a[j].toString();
-//        console.log(b)
-        console.log(b.match(reg))
-    }
-//    console.log(num1.match(reg))
+    var data= [{name:"simon",age:26},{name:"duan",age:27}]
+    data.sort(creatCompar("age"));
+    console.log(data)
 </script>
 </body>
 </html>
