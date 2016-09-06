@@ -158,4 +158,5 @@ function uaMatch(ua){
     break;
   }
 }
+
 module.exports = uaMatch;

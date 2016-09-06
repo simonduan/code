@@ -23,21 +23,14 @@
             }
         }
     }
-    var data= [{name:"simon",age:26},{name:"duan",age:27}]
-    data.sort(creatCompar("age"));
-    console.log(data)
-    function funArg() {
-        console.log(arguments)
-    }
-    funArg(10,20)
-    function factirial(num) {
-        if(num<=1){
-            return 1
-        }else{
-            return num * arguments.callee(num-1)
+    var name = "XL";
+    var person = {
+        name:"xl",
+        showName:function () {
+            console.log(this.name)
         }
     }
-
+    person.showName.call()
 </script>
 </body>
 </html>
