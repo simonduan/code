@@ -7,6 +7,9 @@
 </head>
 <body>
 <script>
+    function con(Someting) {
+        console.log(Someting)
+    }
     function callSomeFunction(someFunction,args) {
         return someFunction(args);
     }
@@ -23,13 +26,21 @@
             }
         }
     }
-//  creat object 8.18  for mac
+//检测属性处于原型中,还是处于实例中
+
+    function hasPrototypeProperty(obj,value) {
+        return (!obj.hasOwnProperty(value) && (value in obj))
+    }
+
     function  Person() {
 
-    }
+    };
     Person.prototype.name = "simon";
-    console.log(Person.prototype)
-    console.log(Person.prototype.constructor)
+
+    var person = new Person()
+    person.name = "aaa";
+    con(person.hasOwnProperty("name"))
+    con(hasPrototypeProperty(person,"name"))
 </script>
 </body>
 </html>
