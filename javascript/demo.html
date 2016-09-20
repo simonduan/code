@@ -31,24 +31,20 @@
     function hasPrototypeProperty(obj,value) {
         return (!obj.hasOwnProperty(value) && (value in obj))
     }
-<<<<<<< HEAD
+
     Person.prototype.name = "player";
     console.log(Person.prototype)
     console.log(Person.prototype.constructor)
     var person = new Person()
     console.log(person.__proto__.constructor)
-=======
+
 
     function  Person() {
 
     };
     Person.prototype.name = "simon";
 
-    var person = new Person()
-    person.name = "aaa";
-    con(person.hasOwnProperty("name"))
-    con(hasPrototypeProperty(person,"name"))
->>>>>>> 1667a9157888833e84dfe828197e673051f8907b
+
 </script>
 </body>
 </html>
