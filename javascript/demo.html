@@ -27,9 +27,11 @@
     function  Person() {
 
     }
-    Person.prototype.name = "simon";
+    Person.prototype.name = "player";
     console.log(Person.prototype)
     console.log(Person.prototype.constructor)
+    var person = new Person()
+    console.log(person.__proto__.constructor)
 </script>
 </body>
 </html>
