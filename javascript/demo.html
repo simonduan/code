@@ -42,8 +42,24 @@
     var person = new Person()
 
     var a  = Object.keys(person)
-    alert(a)//实例化Person  原型属性不会被继承？
+//    alert(a)//实例化Person  原型属性不会被继承
 
+    function PlayerObj() {
+
+    }
+    PlayerObj.prototype = {
+        name:"player",
+        type:"H5",
+        sayName:function () {
+        alert(this.name)
+        }
+    }
+
+    var player  = new PlayerObj();
+    var a = PlayerObj.prototype.con
+    console.log(typeof a)
+    console.log(a instanceof Object);
+    console.log(PlayerObj.prototype)
 </script>
 </body>
 </html>
