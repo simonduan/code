@@ -31,19 +31,18 @@
     function hasPrototypeProperty(obj,value) {
         return (!obj.hasOwnProperty(value) && (value in obj))
     }
+    function Person() {
 
+    }
     Person.prototype.name = "player";
-    console.log(Person.prototype)
-    console.log(Person.prototype.constructor)
+    Person.prototype.sayName = function () {
+        alert(this.name)
+    }
+
     var person = new Person()
-    console.log(person.__proto__.constructor)
 
-
-    function  Person() {
-
-    };
-    Person.prototype.name = "simon";
-
+    var a  = Object.keys(person)
+    alert(a)//实例化Person  原型属性不会被继承？
 
 </script>
 </body>
