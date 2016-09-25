@@ -6,6 +6,18 @@
     <script src="jquery2.1.4.min.js"></script>
 </head>
 <body>
+<button class="open">click me</button><br>
+<br>
+<br>
+<br>
+<br>
+<button class="close">click X</button>
+<br>
+<br>
+<br>
+<br>
+<button class="check">check</button>
+
 <script>
     function con(Someting) {
         console.log(Someting)
@@ -55,7 +67,7 @@
             }
         }
     }
-    alert(object.getNameFunc()())
+//    alert(object.getNameFunc()())
     function  aac(num) {
         for(var i=0;i<num;i++){
             console.log(i);
@@ -63,7 +75,33 @@
 
         alert(i)
     }
-    aac(5)
+    window.name= "bom"
+    $("button.open").click(function () {
+           a = window.open("./new.html","tom")
+    })
+    $("button.close").bind("click",function () {
+            a.close()
+    })
+    $("button.check").bind("click",function () {
+        if (a.closed){
+            alert("已关闭")
+        }else {
+            alert("readly  open")
+        }
+    })
+    var num = 0
+    var max  = 10
+    function jisuanMax() {
+        console.log(1)
+        num  ++
+        if(num < max){
+            setTimeout(jisuanMax,1000)}
+            else{
+                console.log("done")
+            }
+    }
+    setTimeout(jisuanMax,1000)
+
 </script>
 </body>
 </html>
