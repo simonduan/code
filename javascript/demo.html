@@ -42,24 +42,28 @@
     var person = new Person()
 
     var a  = Object.keys(person)
-//    alert(a)//实例化Person  原型属性不会被继承
+    //    alert(a)//实例化Person  原型属性不会被继承
+    //  闭包
+    var name = "window";
+    var object = {
+        name:"My object",
 
-    function PlayerObj() {
-
-    }
-    PlayerObj.prototype = {
-        name:"player",
-        type:"H5",
-        sayName:function () {
-        alert(this.name)
+        getNameFunc:function () {
+//            var that = this;
+            return function () {
+                return this.name
+            }
         }
     }
+    alert(object.getNameFunc()())
+    function  aac(num) {
+        for(var i=0;i<num;i++){
+            console.log(i);
+        }
 
-    var player  = new PlayerObj();
-    var a = PlayerObj.prototype.con
-    console.log(typeof a)
-    console.log(a instanceof Object);
-    console.log(PlayerObj.prototype)
+        alert(i)
+    }
+    aac(5)
 </script>
 </body>
 </html>
