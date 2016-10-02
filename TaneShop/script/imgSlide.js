@@ -20,3 +20,11 @@ function showBrandList(idx) {
     rollobj.stop(true,false).animate({left:-rollWidth *idx},1000)
 
 }
+
+$("a.btn_next").bind("click",function(){
+
+    var roll_obj = $("ul.figures_list");
+    var li_width = $("ul.figures_list").find("li").outerWidth();
+    var roll_width = li_width * 4;
+    $("div.mod_figures").css("left","-1880")
+})
