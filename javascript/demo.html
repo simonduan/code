@@ -40,67 +40,10 @@
     }
 //检测属性处于原型中,还是处于实例中
 
-    function hasPrototypeProperty(obj,value) {
-        return (!obj.hasOwnProperty(value) && (value in obj))
-    }
-    function Person() {
+function  checkAgrs() {
+    
+}
 
-    }
-    Person.prototype.name = "player";
-    Person.prototype.sayName = function () {
-        alert(this.name)
-    }
-
-    var person = new Person()
-
-    var a  = Object.keys(person)
-    //    alert(a)//实例化Person  原型属性不会被继承
-    //  闭包
-    var name = "window";
-    var object = {
-        name:"My object",
-
-        getNameFunc:function () {
-//            var that = this;
-            return function () {
-                return this.name
-            }
-        }
-    }
-//    alert(object.getNameFunc()())
-    function  aac(num) {
-        for(var i=0;i<num;i++){
-            console.log(i);
-        }
-
-        alert(i)
-    }
-    window.name= "bom"
-    $("button.open").click(function () {
-           a = window.open("./new.html","tom")
-    })
-    $("button.close").bind("click",function () {
-            a.close()
-    })
-    $("button.check").bind("click",function () {
-        if (a.closed){
-            alert("已关闭")
-        }else {
-            alert("readly  open")
-        }
-    })
-    var num = 0
-    var max  = 10
-    function jisuanMax() {
-        console.log(1)
-        num  ++
-        if(num < max){
-            setTimeout(jisuanMax,1000)}
-            else{
-                console.log("done")
-            }
-    }
-    setTimeout(jisuanMax,1000)
 
 </script>
 </body>
