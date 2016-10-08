@@ -3,15 +3,17 @@
  */
 //页面初始化后获取指定终端版本号
 $(function () {
-    var checkProduct = $("#product").val();
-    // console.log(checkProduct)
+    var checkProduct = $("#product").val().toLocaleLowerCase();
+    console.log(checkProduct)
     $.ajax({
         type:"get",
-        url:"./testData/package.json",
+        url:"http://10.30.106.80:8080/version",
         data:{
             product:checkProduct
         },
-        dataType:"json",
+        dataType:"jsonp",
+        jsonp:"callback",
+        jsonpCallback:"jsonp1",
         success:function (data) {
             console.log(data)
             $("#version").empty()
@@ -26,16 +28,17 @@ $(function () {
 //产品版本号联动
 $(function () {
     $("#product").change(function () {
-        var checkProduct = $("#product").val();
+        var checkProduct = $("#product").val().toLocaleLowerCase();
         console.log(checkProduct)
-        // $("#version").empty();
         $.ajax({
             type:"get",
-            url:"./testData/tsconfig.json",
+            url:"http://10.30.106.80:8080/version",
             data:{
                 product:checkProduct
             },
-            dataType:"json",
+            dataType:"jsonp",
+            jsonp:"callback",
+            jsonpCallback:"jsonp1",
             success:function (data) {
                 console.log(data)
                 $("#version").empty()
