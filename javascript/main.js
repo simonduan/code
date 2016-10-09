@@ -11,7 +11,7 @@ $(function () {
         },
         tooltip:{
             trigger:"item",
-            formatter:"{a}<br/>{b}:{c}({%d})"
+            formatter:"{a}<br/>{b}:{c}({d}%)"
         },
         legend:{
             orient:"auto",
@@ -22,7 +22,7 @@ $(function () {
             {
                 name:"bug类型",
                 type:"pie",
-                radius:"55%",
+                radius:"65%",
                 center:["50%","60%"],
                 data:[
                     {value:12,name:"严重"},
@@ -32,10 +32,10 @@ $(function () {
                     {value:20,name:"建议"}
                 ],
                 itemStyle: {
-                    emphasis: {
+                    normal: {
                         shadowBlur: 10,
                         shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        shadowColor: 'rgba(0, 0, 0, 0.1)'
                     }
                 }
 
