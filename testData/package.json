@@ -1,7 +1,11 @@
-jsonp1([
-{value:12,name:"严重"},
-{value:1,name:"致命"},
-{value:45,name:"一般"},
-{value:13,name:"低"},
-{value:20,name:"建议"}
-])
+jsonp1({
+"title": "bug类型分布",
+        "desc":"当前bulid缺陷类型占比",
+
+bugdata:[
+{value: 12, name: "严重"},
+{value: 1, name: "致命"},
+{value: 45, name: "一般"},
+{value: 13, name: "低"},
+{value: 20, name: "建议"}
+]})

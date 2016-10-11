@@ -1,13 +1,13 @@
 /**
  * Created by simonduan on 2016/10/11.
  */
-function createPie(divdata,piedata,legenddata) {
+function createPie(divdata,piedata,legenddata,title,desc) {
     // 需要传递三个参数：
-    //1.divdata 要插入图表的div元素  2.piedata 要构建饼图的数据  3.legenddata图例配置的基本数据
+    //1.divdata 要插入图表的div元素  2.piedata 要构建饼图的数据  3.legenddata图例配置的基本数据 4.饼图标题 5.饼图描述
     var option = {
         title:{
-            text:"缺陷类型分布",
-            subtext:"当前版本缺陷类型总数占比",
+            text:title,
+            subtext:desc,
             link:"http://tapd.oa.com/",
             x:"center"
         },
