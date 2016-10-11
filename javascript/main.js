@@ -2,7 +2,38 @@
  * Created by Simon on 16/10/8.
  */
 $(function () {
-    var myChat = echarts.init(document.getElementById("div1"));
+    $(".sumbit").click(function () {
+        var productVal = $("#product").val();
+        var versionVal = $("#version option:selected").text();
+        $.ajax({
+            type:"get",
+            url:"./testData/package.json",
+            // url:"http://10.30.106.80:8080/version",
+            data:{
+                product:productVal,
+                version:versionVal
+            },
+            dataType:"jsonp",
+            jsonp:"callback",
+            jsonpCallback:"jsonp1",
+            success:function (data) {
+                //解析返回数据作为饼图的数据
+                dataArr = [];
+                for(var i=0;i<data.length;i++){
+                    console.log(data[i])
+                    dataArr.push(data[i])
+                };
+                //开始制作饼图
+                var divdata = echarts.init(document.getElementById("div1"));
+                createPie(divdata,dataArr)
+            }
+        });
+
+    })
+});
+//制做饼图函数
+function createPie(divdata,piedata) {
+    // var myChat = echarts.init(document.getElementById("div1"));
     var option = {
         title:{
             text:"缺陷类型分布",
@@ -24,13 +55,7 @@ $(function () {
                 type:"pie",
                 radius:"65%",
                 center:["50%","60%"],
-                data:[
-                    {value:12,name:"严重"},
-                    {value:1,name:"致命"},
-                    {value:45,name:"一般"},
-                    {value:13,name:"低"},
-                    {value:20,name:"建议"}
-                ],
+                data:piedata,
                 itemStyle: {
                     normal: {
                         shadowBlur: 10,
@@ -42,5 +67,6 @@ $(function () {
             }
         ]
     };
-    myChat.setOption(option)
-});
+    divdata.setOption(option)
+}
+

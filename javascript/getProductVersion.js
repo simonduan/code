@@ -4,10 +4,11 @@
 //页面初始化后获取指定终端版本号
 $(function () {
     var checkProduct = $("#product").val().toLocaleLowerCase();
-    // console.log(checkProduct)
+
     $.ajax({
         type:"get",
-        url:"http://10.30.106.80:8080/version",
+        url:"./testData/tsconfig.json",
+        // url:"http://10.30.106.80:8080/version",
         data:{
             product:checkProduct
         },
@@ -18,7 +19,7 @@ $(function () {
             console.log(data)
             $("#version").empty()
             $.each(data,function (name,value) {
-                console.log(name+":"+value)
+                
                 var newVersion = "<option value=" +name+">" +value+"</option>"
                 $("#version").append(newVersion)
             })
