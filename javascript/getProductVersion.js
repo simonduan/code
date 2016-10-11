@@ -33,7 +33,7 @@ $(function () {
         // console.log(checkProduct)
         $.ajax({
             type:"get",
-            url:"http://10.30.106.80:8080/version",
+            url:"./testData/tsconfig.json",
             data:{
                 product:checkProduct
             },
