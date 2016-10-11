@@ -19,54 +19,21 @@ $(function () {
             success:function (data) {
                 //解析返回数据作为饼图的数据
                 dataArr = [];
+                legenddata = [];
                 for(var i=0;i<data.length;i++){
-                    console.log(data[i])
+                    console.log(data[i].name)
                     dataArr.push(data[i])
+                    legenddata.push(data[i].name)
                 };
                 //开始制作饼图
                 var divdata = echarts.init(document.getElementById("div1"));
-                createPie(divdata,dataArr)
+                createPie(divdata,dataArr,legenddata)
             }
         });
+        createLine()
 
     })
 });
 //制做饼图函数
-function createPie(divdata,piedata) {
-    // var myChat = echarts.init(document.getElementById("div1"));
-    var option = {
-        title:{
-            text:"缺陷类型分布",
-            subtext:"当前版本缺陷类型总数占比",
-            x:"center"
-        },
-        tooltip:{
-            trigger:"item",
-            formatter:"{a}<br/>{b}:{c}({d}%)"
-        },
-        legend:{
-            orient:"auto",
-            left:"left",
-            data:["致命","严重","一般","低","建议"]
-        },
-        series:[
-            {
-                name:"bug类型",
-                type:"pie",
-                radius:"65%",
-                center:["50%","60%"],
-                data:piedata,
-                itemStyle: {
-                    normal: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.1)'
-                    }
-                }
 
-            }
-        ]
-    };
-    divdata.setOption(option)
-}
 

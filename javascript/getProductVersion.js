@@ -16,7 +16,7 @@ $(function () {
         jsonp:"callback",
         jsonpCallback:"jsonp1",
         success:function (data) {
-            console.log(data)
+            // console.log(data)
             $("#version").empty()
             $.each(data,function (name,value) {
                 
