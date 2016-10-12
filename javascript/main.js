@@ -22,6 +22,7 @@ $(function () {
                  titledata = data.title;
                  desc = data.desc;
                 console.log(data)
+                a = data;
                 dataArr = [];
                 legenddata = [];
                 var bugdata = data.bugdata;
