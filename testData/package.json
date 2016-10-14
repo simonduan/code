@@ -3,21 +3,9 @@ jsonp1({
 		key2:"value2",
 		datainfo:[
 			{
-				title: "bug类型分布",
-				desc:"当前bulid缺陷类型占比",
-				type:"pie",
-				data:[
-						{value: 12, name: "严重"},
-						{value: 1, name: "致命"},
-						{value: 45, name: "一般"},
-						{value: 13, name: "低"},
-						{value: 20, name: "建议"}
-					]
-			},
-			{
 				title:"bug走势图",
 				link:"http://tapd.oa.com/",
-				type:"line1",
+				type:"line",
 				time:["9.10","9.11","9.12","9.13","9.14","9.15","9.16"],
 				data:[
 						{
@@ -31,7 +19,32 @@ jsonp1({
 							data: [0, 0, 3, 6, 9, 12, 2]
 						}
 					]
-			}	
+			},
+			{
+				title: "bug类型分布",
+				desc:"当前bulid缺陷类型占比",
+				type:"pie",
+				data:[
+					{value: 12, name: "严重"},
+					{value: 1, name: "致命"},
+					{value: 45, name: "一般"},
+					{value: 13, name: "低"},
+					{value: 20, name: "建议"}
+				]
+			}
+//			{
+//				title: "bug类型分布",
+//				desc:"当前bulid缺陷类型占比",
+//				type:"ac",
+//				data:[
+//					{value: 12, name: "严重"},
+//					{value: 1, name: "致命"},
+//					{value: 45, name: "一般"},
+//					{value: 13, name: "低"},
+//					{value: 20, name: "建议"}
+//				]
+//			}
+
 		]
 	
 })

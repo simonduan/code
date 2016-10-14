@@ -1,37 +1,8 @@
 
 //  Created by Simon on 16/10/8.
 //
-// $(function () {
-//     $(".sumbit").click(function () {
-//         var productVal = $("#product").val();
-//         var versionVal = $("#version option:selected").text();
-//         $.ajax({
-//             type:"get",
-//             url:"./testData/package.json",
-//
-//             data:{
-//                 product:productVal,
-//                 version:versionVal
-//             },
-//             dataType:"jsonp",
-//             jsonp:"callback",
-//             jsonpCallback:"jsonp1",
-//             success:function (data) {
-//                 var datalength = data.datainfo.length
-//                 console.log(datalength)
-//                 $(".echart").hide().filter(".echart:lt("+datalength+")").show()
-//
-//
-//             },
-//             error:function (e) {
-//                 console.log(e)
-//             }
-//         });
-//
-//
-//     })
-// });
-//制做饼图函数
+
+
 
 //页面初始化时 动态加载DOM，并展现默认数据
 $(function () {
@@ -54,7 +25,32 @@ $(function () {
     },0)
     });
 })
+//绑定点击按钮事件
+$(function () {
+    $(".sumbit").click(function () {
+        var productVal = $("#product").val();
+        var versionVal = $("#version option:selected").text();
+        $.ajax({
+            type:"get",
+            url:"./testData/package.json",
 
+            data:{
+                product:productVal,
+                version:versionVal
+            },
+            dataType:"jsonp",
+            jsonp:"callback",
+            jsonpCallback:"jsonp1",
+            success:modifyDom,
+            error:function (e) {
+                console.log(e)
+            }
+        });
+
+
+    })
+});
+//动态解析数据
 function modifyDom(data) {
     var datalength = data.datainfo.length;
     $(".echart").hide().filter(".echart:lt(" + datalength + ")").show()
@@ -76,7 +72,29 @@ function modifyDom(data) {
             createPie(divdata,dataArry,legenddata,pietitle,piedesc)
             console.log(legenddata)
         }
+        // else if(data.datainfo[i].type == "line"){
+        //     alert(1)
+        // }
+        // else if(data.datainfo[i].type =="ac"){
+        //     alert(2)
+        // }
+
     };
+    for(var i=0;i<datalength;i++){
+        //判断是否为折线图&&制作折线图
+        if(data.datainfo[i].type == "line"){
+            linetitle = data.datainfo[i].title;
+            linelink = data.datainfo[i].link;
+            timedata = data.datainfo[i].time;
+            linedata = data.datainfo[i].data;
+            legenddata = [];
+            for(var i=0;i<linedata.length;i++){
+                legenddata.push(linedata[i].name)
+            }
+            var divdata = echarts.init(document.getElementById("div2"))
+            createLine(divdata,linetitle,linelink,legenddata,timedata,linedata)
 
-
+        }
+    };
 }
+
