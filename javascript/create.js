@@ -39,14 +39,15 @@ function createPie(divdata,piedata,legenddata,title,desc) {
             }
         ]
     };
+  
     divdata.setOption(option)
 }
 //制作折线图
-function createLine() {
+function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
     var option = {
         title:{
-            text:"版本周期bug变化趋势",
-            link:"http://tapd.oa.com",
+            text:title,
+            link:title_link,
             x:"center",
             subtext:"版本bug类型变化趋势走势图"
         },
@@ -54,7 +55,8 @@ function createLine() {
             trigger:"axis"
         },
         legend:{
-            data:["功能bug","性能bug"],
+            // data:["功能bug","性能bug"],
+            data:legenddata,
             y:"bottom"
         },
         toolbox: {
@@ -71,9 +73,10 @@ function createLine() {
             {
                 type:"category",
                 name:"时间",
-                data:["9.10","9.11","9.12","9.13","9.14","9.15","9.16"]
+                data:timedata
             }
         ],
+        // xAxis:xdata,
         yAxis:[
             {
                 name:"数量",
@@ -82,19 +85,20 @@ function createLine() {
             }
 
         ],
-        series: [
-            {
-                name: '功能bug',
-                type: 'line',
-                data: [20, 35, 57, 40, 21, 12, 4]
-            },
-            {
-                name: '性能bug',
-                type: 'line',
-                data: [0, 0, 3, 6, 9, 12, 2]
-            }
-        ]
+        // yAxis:ydata,
+        // series: [
+        //     {
+        //         name: '功能bug',
+        //         type: 'line',
+        //         data: [20, 35, 57, 40, 21, 12, 4]
+        //     },
+        //     {
+        //         name: '性能bug',
+        //         type: 'line',
+        //         data: [0, 0, 3, 6, 9, 12, 2]
+        //     }
+        // ]
+        series:linedata
     };
-    var divdata = echarts.init(document.getElementById("div2"))
     divdata.setOption(option)
 }

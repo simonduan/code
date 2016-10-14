@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./javascript/jquery2.1.4.min.js"></script>
-    <script src="./javascript/getProductVersion.js" async="async"></script>
-    <script src="./javascript/echarts.js"></script>
-    <script src="javascript/create.js"></script>
-    <script src="./javascript/main.js"></script>
-    <script src="./javascript/line.js"></script>
+
     <title>demo.html</title>
 </head>
 <body>
 <div id="container">
-    <div id="retrieval">
-        <div class="check check_product">
-            <select id="product">
-                <option value="iphone">iphone</option>
-                <option value="android" selected="selected">android</option>
-                <option value="iPad">iPad</option>
-                <option value="tv">TV</option>
-                <option value="web">web</option>
-            </select>
-        </div>
-        <div class="check check_bulid">
-            <select id="version">
-                <option value="">版本号1</option>
-                <option value="">版本号1</option>
-                <option value="">版本号1</option>
-                <option value="">版本号1</option>
+    <div class="head">
+        <div id="retrieval">
+            <div class="check check_product">
+                <select id="product">
+                    <option value="iphone">iphone</option>
+                    <option value="android" selected="selected">android</option>
+                    <option value="iPad">iPad</option>
+                    <option value="tv">TV</option>
+                    <option value="web">web</option>
+                </select>
+            </div>
+            <div class="check check_bulid">
+                <select id="version">
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
 
-            </select>
-        </div>
-        <div class="check check_product">
-            <button class="sumbit">查询</button>
+                </select>
+            </div>
+            <div class="check check_product">
+                <button class="sumbit">查询</button>
+            </div>
         </div>
     </div>
-    <div id="div1"></div>
-    <div id="div2"></div>
-    <div id="div3"></div>
-    <div id="div4"></div>
-    <div id="div5"></div>
+    <div class="content">
+        <div id="div1" class="echart"></div>
+        <div id="div2" class="echart"></div>
+        <div id="div3" class="echart"></div>
+        <div id="div4" class="echart"></div>
+        <div id="div5" class="echart"></div>
+    </div>
 </div>
-<script>
-
-</script>
+<script src="./javascript/jquery2.1.4.min.js"></script>
+<script src="./javascript/echarts.js"></script>
+<script src="./javascript/getProductVersion.js"></script>
+<script src="./javascript/create.js"></script>
+<script src="./javascript/main.js"></script>
 </body>
+
 </html>
