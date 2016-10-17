@@ -102,3 +102,8 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
     };
     divdata.setOption(option)
 }
+
+module.exports = {
+    createLine: createLine,
+    createPie: createPie
+};
