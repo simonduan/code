@@ -1,7 +1,7 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "",
+    "description": "在本目录下运行`gulp`，会自动往js目录下生成打包好的js。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-inject": "^4.1.0",
+    "webpack": "^1.13.2",
     "webpack-stream": "^3.2.0"
   }
 }
