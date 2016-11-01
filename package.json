@@ -1,7 +1,7 @@
 {
   "name": "code",
   "version": "1.0.0",
-    "description": "在本目录下运行`gulp`，会自动往js目录下生成打包好的js。",
+  "description": "在本目录下运行`gulp`，会自动往js目录下生成打包好的js。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,8 +18,12 @@
   "homepage": "https://github.com/simonduan/code#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-inject": "^4.1.0",
     "webpack": "^1.13.2",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "merge2": "^1.0.2"
   }
 }
