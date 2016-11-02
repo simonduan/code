@@ -6,45 +6,34 @@ jsonp1({
 				title:"bug走势图",
 				link:"http://tapd.oa.com/",
 				type:"line",
-				time:["9.10","9.11","9.12","9.13","9.14","9.15","9.16"],
+				time:["build200","build300","build400","build500","build600","build700","build800"],
 				data:[
 						{
 							name: '功能bug',
 							type: 'line',
 							data: [20, 35, 57, 40, 21, 12, 4]
 						},
-						{
-							name: '性能bug',
-							type: 'line',
-							data: [0, 0, 3, 6, 9, 12, 2]
-						}
+//						{
+//							name: '性能bug',
+//							type: 'line',
+//							data: [0, 0, 3, 6, 9, 12, 2]
+//						}
 					]
 			},
 			{
 				title: "bug类型分布",
-				desc:"当前bulid缺陷类型占比",
+				desc:"Aphone版本5.20专项测试发现总bug数30，\n其中稳定性测试10个，性能测试20个",
 				type:"pie",
 				data:[
-					{value: 12, name: "严重"},
-					{value: 1, name: "致命"},
-					{value: 45, name: "一般"},
-					{value: 13, name: "低"},
-					{value: 20, name: "建议"}
-				]
-			}
-//			{
-//				title: "bug类型分布",
-//				desc:"当前bulid缺陷类型占比",
-//				type:"ac",
-//				data:[
-//					{value: 12, name: "严重"},
-//					{value: 1, name: "致命"},
+					{value: 20, name: "内存泄漏"},
+					{value: 10, name: "稳定性测试"},
 //					{value: 45, name: "一般"},
 //					{value: 13, name: "低"},
 //					{value: 20, name: "建议"}
-//				]
-//			}
+				]
+			}
+
 
 		]
-	
+
 })
