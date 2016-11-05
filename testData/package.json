@@ -6,18 +6,19 @@ jsonp1({
 				title:"bug走势图",
 				link:"http://tapd.oa.com/",
 				type:"line",
-				time:["build200","build300","build400","build500","build600","build700","build800"],
+				module_name:"",
+				time:["build200","build300","build400","build500","build600","build700","build00"],
 				data:[
 						{
 							name: '功能bug',
 							type: 'line',
 							data: [20, 35, 57, 40, 21, 12, 4]
 						},
-//						{
-//							name: '性能bug',
-//							type: 'line',
-//							data: [0, 0, 3, 6, 9, 12, 2]
-//						}
+						{
+							name: '性能bug',
+							type: 'line',
+							data: [0, 0, 3, 6, 9, 12, 2]
+						}
 					]
 			},
 			{
@@ -27,10 +28,30 @@ jsonp1({
 				data:[
 					{value: 20, name: "内存泄漏"},
 					{value: 10, name: "稳定性测试"},
-//					{value: 45, name: "一般"},
-//					{value: 13, name: "低"},
-//					{value: 20, name: "建议"}
+					{value: 45, name: "一般"},
+					{value: 13, name: "低"},
+					{value: 20, name: "建议"}
 				]
+			},
+			{
+							title:"专项测试",
+							desc:"不同专项在最近两次构建的质量",
+							type:"bar",
+							link:"http://tapd.oa.com/",
+							Xdata:["CPU","MEM","Power","Network"],
+							data:[
+									{
+										name:'4.5.0',
+										type:'bar',
+										data:["2","4","3","5"]
+									},
+									{
+										name:'4.6.0',
+										type:'bar',
+										data:["3","7","2","1"]
+									}
+
+							]
 			}
 
 

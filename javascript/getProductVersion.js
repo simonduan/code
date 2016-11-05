@@ -1,8 +1,8 @@
 /**
  * Created by simonduan on 2016/10/8.
  */
-//页面初始化后获取指定终端版本号
-module.exports = function () {
+// 页面初始化后获取指定终端版本号
+// module.exports = function () {
     $(function () {
         var checkProduct = $("#product").val().toLocaleLowerCase();
 
@@ -53,4 +53,4 @@ module.exports = function () {
             })
         })
     })
-}
+// }

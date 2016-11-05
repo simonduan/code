@@ -1,11 +1,11 @@
 //  Created by Simon on 16/10/8.
 //
-var createPie = require("./create").createPie;
-var createLine = require("./create").createLine;
-
-var echarts = require("./echarts");
-var $ = require("./jquery2.1.4.min");
-require("./getProductVersion")()
+// var createPie = require("./create").createPie;
+// var createLine = require("./create").createLine;
+//
+// var echarts = require("./echarts");
+// var $ = require("./jquery2.1.4.min");
+// require("./getProductVersion")()
 
 //页面初始化时 动态加载DOM，并展现默认数据
 $(function () {
@@ -22,10 +22,10 @@ $(function () {
 			dataType: "jsonp",
 			jsonpCallback: "jsonp1",
 			success: modifyDom,
-			error: function (e) {
-				console.log(e)
-			}
-		}, 0)
+			// error: function (e) {
+			// 	console.log(e)
+			// }
+		}, 1000)
 	});
 })
 //绑定点击按钮事件
@@ -44,10 +44,10 @@ $(function () {
 			dataType: "jsonp",
 			jsonp: "callback",
 			jsonpCallback: "jsonp1",
-			success: modifyDom,
-			error: function (e) {
-				console.log(e)
-			}
+			success: modifyDom
+			// error: function (e) {
+			// 	console.log(e)
+			// }
 		});
 
 
@@ -74,7 +74,7 @@ function modifyDom(data) {
 			//抓取页面容器，初始化图表容器DIV
 			var divdata = echarts.init(document.getElementById("div1"))
 			createPie(divdata, dataArry, legenddata, pietitle, piedesc)
-			console.log(legenddata)
+			// console.log(legenddata)
 		}
 		// else if(data.datainfo[i].type == "line"){
 		//     alert(1)
@@ -83,8 +83,7 @@ function modifyDom(data) {
 		//     alert(2)
 		// }
 
-	}
-	;
+	};
 	for (var i = 0; i < datalength; i++) {
 		//判断是否为折线图&&制作折线图
 		if (data.datainfo[i].type == "line") {
@@ -96,11 +95,31 @@ function modifyDom(data) {
 			for (var i = 0; i < linedata.length; i++) {
 				legenddata.push(linedata[i].name)
 			}
-			var divdata = echarts.init(document.getElementById("div2"))
+			var divdata = echarts.init(document.getElementById("div3"))
 			createLine(divdata, linetitle, linelink, legenddata, timedata, linedata)
 
 		}
+	};
+	for (var i = 0; i < datalength; i++) {
+		//判断是否为折线图&&制作折线图
+		if (data.datainfo[i].type == "bar") {
+
+			title = data.datainfo[i].title;
+
+			title_link = data.datainfo[i].link;
+			console.log(title_link)
+			Xdata = data.datainfo[i].Xdata;
+			console.log(Xdata)
+			bardata= data.datainfo[i].data;
+			desc = data.datainfo[i].desc
+			legenddata = [];
+			for (var i = 0; i < bardata.length; i++) {
+				legenddata.push(bardata[i].name)
+			}
+			var divdata = echarts.init(document.getElementById("div2_2"))
+			Histogram(divdata,desc,title,title_link,Xdata,legenddata,bardata)
+
+		}
 	}
-	;
 }
 

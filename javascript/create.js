@@ -44,6 +44,7 @@ function createPie(divdata,piedata,legenddata,title,desc) {
 }
 //制作折线图
 function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
+    //参数  1.DOMID 2.图表题 3.标题跳转链接 4.图例数据 5.X轴数据 6.制图数据
     var option = {
         title:{
             text:title,
@@ -72,7 +73,7 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
         xAxis:[
             {
                 type:"category",
-                name:"时间",
+                name:"bulid",
                 data:timedata
             }
         ],
@@ -85,26 +86,78 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
             }
 
         ],
-        // yAxis:ydata,
-        // series: [
-        //     {
-        //         name: '功能bug',
-        //         type: 'line',
-        //         data: [20, 35, 57, 40, 21, 12, 4]
-        //     },
-        //     {
-        //         name: '性能bug',
-        //         type: 'line',
-        //         data: [0, 0, 3, 6, 9, 12, 2]
-        //     }
-        // ]
+
         series:linedata
     };
     divdata.setOption(option)
 }
 
-
-module.exports = {
-    createLine: createLine,
-    createPie: createPie
-};
+//制作柱状图
+function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
+    //传参 1.DomId 2.图表标题 3.标题跳转链接 4.x轴数据 5.图例数据 6.制图数据
+    var option = {
+        title:{
+            text:desc,
+            subtext:title,
+            link:title_link,
+            x:"center"
+        },
+        legend:{
+            orient:"auto",
+            left:"left",
+            data:legenddata
+        },
+        // color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'  鼠标hover时阴影的效果用于柱状图用shadow
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : Xdata,
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        // series : [
+        //     {
+        //         name:'4.5.0',
+        //         type:'bar',
+        //         barWidth: '20%',
+        //         data:["2","4","3","5"]
+        //     },
+        //     {
+        //
+        //         name:'4.6.0',
+        //         type:'bar',
+        //         barWidth: '20%',
+        //         data:["3","7","2","1"]
+        //     }
+        // ]
+        series:bardata
+    };
+    divdata.setOption(option)
+}
+//
+// module.exports = {
+//     createLine: createLine,
+//     createPie: createPie,
+//     Histogram:Histogram
+// };
+var id = "#id1_2"
+$(id)

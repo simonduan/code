@@ -71,7 +71,7 @@
 				error: function (e) {
 					console.log(e)
 				}
-			}, 0)
+			}, 1000)
 		});
 	})
 	//绑定点击按钮事件
@@ -90,10 +90,10 @@
 				dataType: "jsonp",
 				jsonp: "callback",
 				jsonpCallback: "jsonp1",
-				success: modifyDom,
-				error: function (e) {
-					console.log(e)
-				}
+				success: modifyDom
+				// error: function (e) {
+				// 	console.log(e)
+				// }
 			});
 
 
@@ -101,6 +101,7 @@
 	});
 	//动态解析数据
 	function modifyDom(data) {
+		alert(1)
 		var datalength = data.datainfo.length;
 		$(".echart").hide().filter(".echart:lt(" + datalength + ")").show()
 		for (var i = 0; i < datalength; i++) {
@@ -202,6 +203,7 @@
 	}
 	//制作折线图
 	function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
+	    //参数  1.DOMID 2.图表题 3.标题跳转链接 4.图例数据 5.X轴数据 6.制图数据
 	    var option = {
 	        title:{
 	            text:title,
@@ -230,7 +232,7 @@
 	        xAxis:[
 	            {
 	                type:"category",
-	                name:"时间",
+	                name:"bulid",
 	                data:timedata
 	            }
 	        ],
@@ -243,28 +245,80 @@
 	            }
 
 	        ],
-	        // yAxis:ydata,
-	        // series: [
+
+	        series:linedata
+	    };
+	    divdata.setOption(option)
+	}
+
+	//制作柱状图
+	function Histogram(divdata,title,title_link,Xdata,legenddata,bardata) {
+	    //传参 1.DomId 2.图表标题 3.标题跳转链接 4.x轴数据 5.图例数据 6.制图数据
+	    var option = {
+	        title:{
+	            text:title,
+	            subtext:"xxxx1",
+	            link:title_link,
+	            x:"center"
+	        },
+	        legend:{
+	            orient:"auto",
+	            left:"left",
+	            data:legenddata
+	        },
+	        // color: ['#3398DB'],
+	        tooltip : {
+	            trigger: 'axis',
+	            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+	                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'  鼠标hover时阴影的效果用于柱状图用shadow
+	            }
+	        },
+	        grid: {
+	            left: '3%',
+	            right: '4%',
+	            bottom: '3%',
+	            containLabel: true
+	        },
+	        xAxis : [
+	            {
+	                type : 'category',
+	                data : Xdata,
+	                axisTick: {
+	                    alignWithLabel: true
+	                }
+	            }
+	        ],
+	        yAxis : [
+	            {
+	                type : 'value'
+	            }
+	        ],
+	        // series : [
 	        //     {
-	        //         name: '功能bug',
-	        //         type: 'line',
-	        //         data: [20, 35, 57, 40, 21, 12, 4]
+	        //         name:'4.5.0',
+	        //         type:'bar',
+	        //         barWidth: '20%',
+	        //         data:["2","4","3","5"]
 	        //     },
 	        //     {
-	        //         name: '性能bug',
-	        //         type: 'line',
-	        //         data: [0, 0, 3, 6, 9, 12, 2]
+	        //
+	        //         name:'4.6.0',
+	        //         type:'bar',
+	        //         barWidth: '20%',
+	        //         data:["3","7","2","1"]
 	        //     }
 	        // ]
-	        series:linedata
+	        series:bardata
 	    };
 	    divdata.setOption(option)
 	}
 
 	module.exports = {
 	    createLine: createLine,
-	    createPie: createPie
+	    createPie: createPie,
+	    Histogram:Histogram
 	};
+
 
 /***/ },
 /* 2 */

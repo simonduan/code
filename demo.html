@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./javascript/jquery2.1.4.min.js"></script>
+    <script src="./javascript/echarts.js"></script>
+    <script src="./javascript/create.js"></script>
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/getProductVersion.js"></script>
     <title>demo.html</title>
 </head>
 <body>
@@ -35,13 +39,28 @@
     </div>
     <div class="content">
         <div id="div1" class="echart"></div>
-        <div id="div2" class="echart"></div>
-        <div id="div3" class="echart"></div>
+        <div id="div2">
+            <div id="div2_1" class="check check_Special">
+                <select id="Special">
+                    <option value="cpu">CPU</option>
+                    <option value="mem">MEM</option>
+                    <option value="power">Power</option>
+                    <option value="Weaknetwork">Weak network</option>
+                </select>
+            </div>
+            <div id="div2_2" class="echart"></div>
+        </div>
+        <div id="div3" class="echart">
+            <div id="div3_1" class="echart_small"></div>
+            <div id="div3_2" class="echart_small"></div>
+            <div id="div3_3" class="echart_small"></div>
+        </div>
         <div id="div4" class="echart"></div>
         <div id="div5" class="echart"></div>
     </div>
 </div>
-<script src="./js/script.js"></script>
+<!--<script src="./javascript/demo.js"></script>-->
+<!--<script src="./js/script.js"></script>-->
 </body>
 
 </html>
