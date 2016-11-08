@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./javascript/jquery2.1.4.min.js"></script>
+    <script src="./javascript/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./javascript/create.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="head">
+    <div id="retrieval">
+        <div class="check">
+            <select id="product">
+                <option value="iphone">iphone</option>
+                <option value="android" selected="selected">android</option>
+                <option value="iPad">iPad</option>
+                <option value="tv">TV</option>
+                <option value="web">web</option>
+            </select>
+        </div>
+        <div class="check">
+            <select id="version">
+                <option value="">版本号1</option>
+                <option value="">版本号1</option>
+                <option value="">版本号1</option>
+                <option value="">版本号1</option>
+
+            </select>
+        </div>
+        <div class="check">
+            <button class="sumbit">查询</button>
+        </div>
+        <div class="check">
+            <input name="err" type="radio" value="只看出错">只看出错
+        </div>
+    </div>
+</div>
+<div id="div1">
+    <table id="example" class="tab">
+        <thead>
+        <tr>
+            <th>执行时间</th>
+            <th>耗时(S)</th>
+            <th>总用例</th>
+            <th>失败率</th>
+            <th>机型</th>
+            <th>日志</th>
+            <th>原因备注</th>
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>20</th>
+            <th>30</th>
+            <th>5%</th>
+            <th>vivo X7</th>
+            <th>url</th>
+            <th>空</th>
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>20</th>
+            <th>30</th>
+            <th>5%</th>
+            <th>vivo X7</th>
+            <th>url</th>
+            <th>空</th>
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>20</th>
+            <th>30</th>
+            <th>5%</th>
+            <th>vivo X7</th>
+            <th>url</th>
+            <th>空</th>
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>20</th>
+            <th>30</th>
+            <th>5%</th>
+            <th>vivo X7</th>
+            <th>url</th>
+            <th>空</th>
+        </tr>
+
+        </thead>
+    </table>
+</div>
+<div id="div2">
+
+
+    <div class="head">
+        <div id="retrieval1">
+            <div class="check">
+                <select id="product1">
+                    <option value="iphone">iphone</option>
+                    <option value="android" selected="selected">android</option>
+                    <option value="iPad">iPad</option>
+                    <option value="tv">TV</option>
+                    <option value="web">web</option>
+                </select>
+            </div>
+            <div class="check">
+                <select id="version1">
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
+                    <option value="">版本号1</option>
+
+                </select>
+            </div>
+            <div class="check">
+                <button class="sumbit">批量编辑</button>
+            </div>
+            <div class="check">
+                <input name="err" type="radio" value="只看出错">只看出错
+            </div>
+        </div>
+    </div>
+    <div id="div2_2">
+        <table id="example1" class="tab">
+            <thead>
+            <tr>
+                <th>执行时间</th>
+                <th>耗时(S)</th>
+                <th>总用例</th>
+                <th>失败率</th>
+                <th>机型</th>
+                <th>日志</th>
+                <th>原因备注</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="2016.10.1" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+
+            </thead>
+        </table>
+    </div>
+
+</div>
+<div id="div6">
+
+</div>
+<script>
+    $(function () {
+//        $("#example").dataTable({
+//            "sScrollX": "100%",
+//            "sScrollXInner": "70%",
+//            "bScrollCollapse": true,
+//            "bFilter": false,
+//            bPaginate:false,
+//            "bInfo": false,
+//            "oLanguage": {
+//                "sLengthMenu": "每页显示 _MENU_ 条记录",
+//                "sZeroRecords": "抱歉， 没有找到",
+//                "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+//                "sInfoEmpty": "没有数据",
+//                "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+//                "oPaginate": {
+//                    "sFirst": "首页",
+//                    "sPrevious": "前一页",
+//                    "sNext": "后一页",
+//                    "sLast": "尾页"
+//                },
+//                "sZeroRecords": "没有更多数据",
+//            },
+//            styling:{
+//                "stripe":""
+//            }
+//
+//        })
+        var div1 = $("#example")
+        var div2 = $("#example1")
+        creatTable(div1)
+        creatTable(div2)
+    })
+//    $(".edit").click(function () {
+//        $(this).text("")
+//    })
+
+</script>
+</body>
+</html>

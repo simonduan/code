@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./javascript/jquery2.1.4.min.js"></script>
+    <script src="./javascript/echarts.js"></script>
+    <script src="./javascript/create.js"></script>
+
+    <script src="./javascript/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+
+    <title>Title</title>
+    <style>
+        .checked{
+            position: relative;
+            left: 700px;
+            top:0px;
+            float: left;
+        }
+        .text{
+            position: relative;
+            height: 0px;
+            width: 50%;
+        }
+        .two{
+            position: relative;
+            float: left;
+            height: 240px;
+            width: 510px;
+            border: 1px solid hotpink;
+            top:20px;
+            margin-left: 25px;
+        }
+        #div11{
+            position: relative;
+            top: 30px;
+            height: 300px;
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid green;
+        }
+        #div4_new{
+            position: relative;
+            top: 150px;
+            height: 300px;
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <div id="retrieval">
+        <div class="text">
+            <div class="content"><p>质量管理一组201610月自动化执行月报</p></div>
+        </div>
+        <div class="checked">
+            <button class="sumbit">预览</button>
+            <button class="sumbit">发送</button>
+        </div>
+    </div>
+</div>
+<div id="div11">
+
+        <table id="example" class="tab">
+            <thead>
+            <tr>
+                <th>项目</th>
+                <th>执行次数</th>
+                <th>失败次数</th>
+                <th>成功率</th>
+                <th>发现bug</th>
+                <th>本月新增</th>
+                <th>延期原因</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="Iphone" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="Android" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="web" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+            <tr>
+                <th class="edit"><input type="text" value="VIP" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+                <th>20</th>
+                <th>30</th>
+                <th>5%</th>
+                <th>vivo X7</th>
+                <th>url</th>
+                <th>空</th>
+            </tr>
+
+            </thead>
+        </table>
+</div>
+<div id="div3">
+    <div id="newdiv1" class="two"></div>
+    <div id="newdiv2" class="two"></div>
+</div>
+<div id="div4_new">
+    <table id="example1" class="tab">
+        <thead>
+        <tr>
+            <th>项目</th>
+            <th>总测试用例</th>
+            <th>web</th>
+            <th>播放器</th>
+            <th></th>
+            <th>下载组件</th>
+
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="Iphone" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>iphone</th>
+            <th>5%</th>
+            <th>10%</th>
+            <th>3%</th>
+            <th>1%</th>
+
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="Android" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>aphone/th>
+            <th>5%</th>
+            <th>10%</th>
+            <th>3%</th>
+            <th>1%</th>
+        </tr>
+        <tr>
+            <th class="edit"><input type="text" value="web" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
+            <th>web</th>
+            <th>20</th>
+            <th>5%</th>
+            <th>10%</th>
+            <th>3%</th>
+            <th>1%</th>
+        </tr>
+
+
+        </thead>
+    </table>
+</div>
+
+<script>
+    var divdata1 = $("#example");
+    creatTable(divdata1)
+    var divdata2 = $("#example1");
+    creatTable(divdata2)
+    $(function () {
+        setTimeout(function () {
+            var productVal = $("#product").val();
+            var versionVal = $("#version option:selected").text();
+            $.ajax({
+                type: "get",
+                url: "./testData/package.json",
+                data: {
+                    product: productVal,
+                    version: versionVal
+                },
+                dataType: "jsonp",
+                jsonpCallback: "jsonp1",
+                success: modifyDom,
+                // error: function (e) {
+                // 	console.log(e)
+                // }
+            }, 3000)
+        });
+    })
+        function modifyDom(data) {
+            var datalength = data.datainfo.length;
+
+            // $(".echart").hide().filter(".echart:lt(" + datalength + ")").show()
+            for (var i = 0; i < datalength; i++) {
+                //判断是否为饼图&&制作饼图
+                if (data.datainfo[i].type == "pie" && data.datainfo[i].modules == "iphone") {
+
+                    var pietitle = data.datainfo[i].title;
+                    var piedesc = data.datainfo[i].desc;
+
+                    var dataArry = data.datainfo[i].data;
+
+                    var legenddata = []
+                    for (var j = 0; j < dataArry.length; j++) {
+                        legenddata.push(dataArry[j].name)
+                    }
+                    ;
+
+                    var divdata = echarts.init(document.getElementById("newdiv1"));
+                    createPie(divdata, dataArry, legenddata, pietitle, piedesc)
+
+                };
+                if (data.datainfo[i].type == "pie" && data.datainfo[i].modules == "aphone") {
+
+                    var pietitle = data.datainfo[i].title;
+                    var piedesc = data.datainfo[i].desc;
+
+                    var dataArry = data.datainfo[i].data;
+
+                    var legenddata = []
+                    for (var j = 0; j < dataArry.length; j++) {
+                        legenddata.push(dataArry[j].name)
+                    }
+                    ;
+
+                    var divdata = echarts.init(document.getElementById("newdiv2"));
+                    createPie(divdata, dataArry, legenddata, pietitle, piedesc)
+
+                };
+
+            };
+        }
+
+</script>
+
+</body>
+</html>

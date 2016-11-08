@@ -1,30 +1,69 @@
+//返回数据格式说明：
+
 jsonp1({
 		key1:"value1",
 		key2:"value2",
 		datainfo:[
 			{
-				title:"bug走势图",
+				title:"CPU走势图",
 				link:"http://tapd.oa.com/",
 				type:"line",
-				module_name:"",
-				time:["build200","build300","build400","build500","build600","build700","build00"],
+				modules:"MEM",
+				time:["场景1","场景2","场景3","场景4"],
 				data:[
 						{
-							name: '功能bug',
+							name: 'build200',
 							type: 'line',
-							data: [20, 35, 57, 40, 21, 12, 4]
+							data: [0.1,0.2,0.25,0.13]
 						},
-						{
-							name: '性能bug',
-							type: 'line',
-							data: [0, 0, 3, 6, 9, 12, 2]
-						}
+//						{
+//							name: 'build300',
+//							type: 'line',
+//							data: [0.15,0.1,0.30,0.2]
+//						}
 					]
 			},
 			{
+				title:"内存走势图",
+				link:"http://tapd.oa.com/",
+				type:"line",
+				modules:"CPU",
+				time:["场景1","场景2","场景3","场景4"],
+				data:[
+						{
+							name: 'build200',
+							type: 'line',
+							data: [0.3,0.4,0.55,0.13]
+						},
+//						{
+//							name: 'build300',
+//							type: 'line',
+//							data: [0.15,0.21,0.32,0.2]
+//						}
+				]
+			},
+			{
+				title:"内存走势图",
+				link:"http://tapd.oa.com/",
+				type:"line",
+				modules:"FPS",
+				time:["场景1","场景2","场景3","场景4"],
+				data:[
+						{
+							name: 'build200',
+							type: 'line',
+							data: [0.3,0.4,0.55,0.13]
+						},
+
+				]
+			},
+
+			{
 				title: "bug类型分布",
 				desc:"Aphone版本5.20专项测试发现总bug数30，\n其中稳定性测试10个，性能测试20个",
+
 				type:"pie",
+				modules:"aaa",
 				data:[
 					{value: 20, name: "内存泄漏"},
 					{value: 10, name: "稳定性测试"},
@@ -34,9 +73,36 @@ jsonp1({
 				]
 			},
 			{
+				title: "iphone机型占比",
+
+				type:"pie",
+				modules:"iphone",
+				data:[
+						{value: 2, name: "iPhone7"},
+						{value: 3, name: "iPhone6plus"},
+						{value: 1, name: "iPhone6"},
+						{value: 4, name: "iPhone6s"}
+
+				]
+			},
+			{
+				title: "aphone机型占比",
+				type:"pie",
+				modules:"aphone",
+				data:[
+						{value: 4, name: "三星"},
+						{value: 2, name: "小米"},
+						{value: 2, name: "华为"},
+						{value: 1, name: "OPPO"}
+
+				]
+			},
+							//柱状图数据
+			{
 							title:"专项测试",
 							desc:"不同专项在最近两次构建的质量",
 							type:"bar",
+							modules:"Special",
 							link:"http://tapd.oa.com/",
 							Xdata:["CPU","MEM","Power","Network"],
 							data:[
@@ -52,7 +118,73 @@ jsonp1({
 									}
 
 							]
+			},
+			{
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
+							type:"bar",
+							link:"http://tapd.oa.com/",
+							modules:"CPU",
+							Xdata:["场景1","场景2","场景3","场景4",],
+							data:[
+									{
+										name:"bulid254",
+										type:"bar",
+										data:[0.12,0.25,0.5,0.1]
+									}
+							]
+			},
+			{
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
+							type:"bar",
+							link:"http://tapd.oa.com/",
+							modules:"MEM",
+							Xdata:["场景1","场景2","场景3","场景4",],
+							data:[
+									{
+									name:"bulid254",
+									type:"bar",
+									data:[0.1,0.25,0.15,0.3]
+									}
+							]
+			},
+			{
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
+							type:"bar",
+							link:"http://tapd.oa.com/",
+							modules:"FPS",
+							Xdata:["场景1","场景2","场景3","场景4",],
+							data:[
+									{
+										name:"bulid254",
+										type:"bar",
+										data:[0.13,0.35,0.15,0.1]
+									}
+							]
+			},
+			{
+							title:"启动耗时",
+							desc:"启动耗时",
+							type:"bar",
+							link:"http://tapd.oa.com/",
+							modules:"Starttime",
+							Xdata:["第一次启动","第二次启动"],
+							data:[
+									{
+										name:"bulid254",
+										type:"bar",
+										data:[5,3]
+									},
+									{
+									name:"bulid254",
+									type:"bar",
+									data:[4,6]
+									}
+							]
 			}
+
 
 
 		]

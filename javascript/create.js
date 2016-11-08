@@ -2,7 +2,7 @@
  * Created by simonduan on 2016/10/11.
  */
 //  制作饼图
-function createPie(divdata,piedata,legenddata,title,desc) {
+function createPie(divdata,piedata,legenddata,title,desc) {title
     // 需要传递三个参数：
     //1.divdata 要插入图表的div元素  2.piedata 要构建饼图的数据  3.legenddata图例配置的基本数据 4.饼图标题 5.饼图描述
     var option = {
@@ -10,7 +10,8 @@ function createPie(divdata,piedata,legenddata,title,desc) {
             text:title,
             subtext:desc,
             link:"http://tapd.oa.com/",
-            x:"center"
+            x:"center",
+
         },
         tooltip:{
             trigger:"items",
@@ -50,7 +51,11 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
             text:title,
             link:title_link,
             x:"center",
-            subtext:"版本bug类型变化趋势走势图"
+            subtext:"版本bug类型变化趋势走势图",
+            textStyle:{
+                fontSize:12
+            },
+            textAlign:"left"
         },
         tooltip:{
             trigger:"axis"
@@ -73,14 +78,14 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
         xAxis:[
             {
                 type:"category",
-                name:"bulid",
+                name:"场景",//需要动态读取
                 data:timedata
             }
         ],
         // xAxis:xdata,
         yAxis:[
             {
-                name:"数量",
+                name:"CPU占用率",
                 type:"value",
                 splitArea:{show:true}
             }
@@ -103,9 +108,10 @@ function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
             x:"center"
         },
         legend:{
-            orient:"auto",
+            orient:"buttom",
             left:"left",
-            data:legenddata
+            data:legenddata,
+            // y:"bottom"
         },
         // color: ['#3398DB'],
         tooltip : {
@@ -120,6 +126,7 @@ function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
             bottom: '3%',
             containLabel: true
         },
+
         xAxis : [
             {
                 type : 'category',
@@ -134,21 +141,7 @@ function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
                 type : 'value'
             }
         ],
-        // series : [
-        //     {
-        //         name:'4.5.0',
-        //         type:'bar',
-        //         barWidth: '20%',
-        //         data:["2","4","3","5"]
-        //     },
-        //     {
-        //
-        //         name:'4.6.0',
-        //         type:'bar',
-        //         barWidth: '20%',
-        //         data:["3","7","2","1"]
-        //     }
-        // ]
+
         series:bardata
     };
     divdata.setOption(option)
@@ -159,5 +152,32 @@ function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
 //     createPie: createPie,
 //     Histogram:Histogram
 // };
-var id = "#id1_2"
-$(id)
+//制作表格
+function creatTable(divdata) {
+    divdata.dataTable({
+        "sScrollX": "100%",
+        "sScrollXInner": "70%",
+        "bScrollCollapse": true,
+        "bFilter": false,
+        bPaginate:false,
+        "bInfo": false,
+        "oLanguage": {
+            "sLengthMenu": "每页显示 _MENU_ 条记录",
+            "sZeroRecords": "抱歉， 没有找到",
+            "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+            "sInfoEmpty": "没有数据",
+            "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "前一页",
+                "sNext": "后一页",
+                "sLast": "尾页"
+            },
+            "sZeroRecords": "没有更多数据",
+        },
+        styling:{
+            "stripe":""
+        }
+
+    })
+}
