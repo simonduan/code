@@ -1,11 +1,18 @@
 //  Created by Simon on 16/10/8.
 //
+
 // var createPie = require("./create").createPie;
 // var createLine = require("./create").createLine;
 //
 // var echarts = require("./echarts");
 // var $ = require("./jquery2.1.4.min");
 // require("./getProductVersion")()
+
+var createPie = require("./create").createPie;
+var createLine = require("./create").createLine;
+
+require("./getProductVersion")()
+
 
 //页面初始化时 动态加载DOM，并展现默认数据
 $(function () {
