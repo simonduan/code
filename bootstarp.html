@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据平台</title>
+    <meta name="viewport" content="width=device-width, init-scale=1">
+    <link rel="icon" href="./img/48.jpg">
+    <script src="javascript/lib/jquery2.1.4.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            background: url("./img/background-photo.jpg") no-repeat;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+        }
+        .click{
+            position: relative;
+            height: auto;
+            width: 30%;
+            margin: 0 auto;
+            color: white;
+            border: 3px solid white;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="click">
+        <h2>开启数据之旅</h2>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".click").css({"display":"block"});
+        setTimeout(Animation(),2000)
+
+    });
+    $(".click").click(function () {
+        window.open("http://v.qq.com","_top")
+    })
+    function Animation() {
+        $(".click").animate({
+            top:"500px",
+        },5000)
+    }
+</script>
+</body>
+</html>
