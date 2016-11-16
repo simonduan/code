@@ -23,10 +23,10 @@
         }
         .container{
             width: 75%;
-            /*height: 1080px;*/
+
             height: 100%;
             margin: 0 auto;
-            /*border: 1px solid white;*/
+
             overflow: visible;
         }
         .Navg{
@@ -34,19 +34,20 @@
             width: 40%;
             height: 200px;
             margin: 0 auto;
-            /*border: 1px solid white;*/
+
             overflow: visible;
             display: none;
+
         }
         .Title_content{
-            display: table;
+
             width: 100%;
             height: 20%;
             margin: 0 auto;
             float: left;
             border: 1px solid white;
             border-radius: 25px;
-            /*box-shadow: 10px 10px 5px #888888*/
+
         }
         .Title_content_two{
             width: 50%;
@@ -56,45 +57,59 @@
             float: left;
             border: 1px solid white;
             border-radius: 25px;
-            /*box-shadow: 5px 5px 5px #888888*/
+
         }
         .desc{
-            display:table-cell;
-            vertical-align: middle;
+
             width: 100%;
             height: 100%;
+            /*margin: 0 auto;*/
             text-align: center;
             font-size: 18px;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .desc:hover{
             cursor: pointer;
         }
         .glyphicon{
             color:white;
+            font-color:white;
         }
+        p{
+            color: white;
+            display: table-cell;
+        }
+
+        a:hover{
+            text-decoration: blink;
+            color: pink;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
     <div class="Navg">
         <div class="Title_content">
-            <div class="desc"><p class="title">测试数据平台<span class="glyphicon glyphicon-heart"></span> </p></div>
+            <div class="desc"> <a class="index" href="http://v.qq.com"><p class="title">测试数据平台<span class="glyphicon glyphicon-heart"></span> </p></a></div>
         </div>
         <div class="Title_content_two">
-            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+            <div class="desc"> <a href=""><p class="title">测试数据平台<span class="glyphicon  glyphicon-fire"></span> </p></a></div>
         </div>
         <div class="Title_content_two">
-            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+            <div class="desc"> <a href=""><p class="title">测试数据平台<span class="glyphicon  glyphicon-fire"></span> </p></a></div>
         </div>
         <div class="Title_content_two">
-            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+            <div class="desc"> <a href=""><p class="title">测试数据平台<span class="glyphicon  glyphicon-fire"></span> </p></a></div>
         </div>
         <div class="Title_content_two">
-            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+            <div class="desc"> <a href=""><p class="title">测试数据平台<span class="glyphicon  glyphicon-fire"></span> </p></a></div>
         </div>
         <div class="Title_content">
-            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+            <div class="desc"> <a href=""><p class="title">测试数据平台<span class="glyphicon  glyphicon-fire"></span> </p></a></div>
         </div>
 
     </div>
