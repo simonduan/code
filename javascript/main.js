@@ -10,6 +10,11 @@
 
 var createPie = require("./create").createPie;
 var createLine = require("./create").createLine;
+// var enter = require("./create").enter;
+var echarts = require("./echarts");
+var $ = require("./jquery2.1.4.min");
+require("./getProductVersion")()
+require("./create").enter();
 
 require("./getProductVersion")()
 
