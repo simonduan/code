@@ -26,6 +26,14 @@
     margin: 0 auto;
     border: 1px solid pink;
 }
+#div2_2{
+    position: relative;
+    top: 50px;
+    height: 220px;
+    width:100%;
+    margin: 0 auto;
+    /*border: 1;*/
+}
 #div3{
     position: relative;
     top: 90px;
@@ -33,6 +41,7 @@
     width: 60%;
     margin: 0 auto;
     border: 1px solid green;
+
 }
 #div4{
     position: relative;
@@ -43,15 +52,56 @@
     border: 1px solid green;
 }
 #div5{
+
     position: relative;
-    top: 130px;
-    height: 40px;
-    width: 100%;
-    background-color: dimgray;
+    top: 150px;
+    height: 300px;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+.echart_small{
+    position: relative;
+    top: 30px;
+    /*left: 10px;*/
+    height: 220px;
+    width:30%;
+    margin: 0 10px;
+    border: 1px solid black;
+    float: left;
+}，
+/*.check{*/
+    /*position: relative;*/
+    /*top: 10px;*/
+    /*float: left;*/
+    /*margin-left: 20px;*/
+/*}*/
+
+.content_head{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.title{
+    position: relative;
+    left: 450px;
 }
 .check{
     position: relative;
-    top: 10px;
     float: left;
-    margin-left: 20px;
+    top:10px;
+    margin-left: 10px;
+}
+#div5_1{
+    position: relative;
+    top: 50px;
+    height: 220px;
+    width:100%;
+    margin: 0 auto;
+}
+/*********表格********/
+.tab{
+    width: 400px;
+    height: auto;
+    margin:  0 auto;
 }
