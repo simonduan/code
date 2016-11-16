@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>数据平台</title>
-    <meta name="viewport" content="width=device-width, init-scale=1">
+    <meta name="viewport"content="width=device-width,init-scale=1.0,maximum-scale=1.0,user-scale=no">
     <link rel="icon" href="./img/48.jpg">
     <script src="javascript/lib/jquery2.1.4.min.js"></script>
     <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -17,37 +17,99 @@
             overflow: hidden;
             background-size: cover;
         }
-        .click{
-            position: relative;
-            height: auto;
-            width: 30%;
+        html body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 75%;
+            /*height: 1080px;*/
+            height: 100%;
             margin: 0 auto;
-            color: white;
-            border: 3px solid white;
-            text-align: center;
+            /*border: 1px solid white;*/
+            overflow: visible;
+        }
+        .Navg{
+            position: relative;
+            width: 40%;
+            height: 200px;
+            margin: 0 auto;
+            /*border: 1px solid white;*/
+            overflow: visible;
             display: none;
+        }
+        .Title_content{
+            display: table;
+            width: 100%;
+            height: 20%;
+            margin: 0 auto;
+            float: left;
+            border: 1px solid white;
+            border-radius: 25px;
+            /*box-shadow: 10px 10px 5px #888888*/
+        }
+        .Title_content_two{
+            width: 50%;
+            display: table;
+            height: 20%;
+            position: relative;
+            float: left;
+            border: 1px solid white;
+            border-radius: 25px;
+            /*box-shadow: 5px 5px 5px #888888*/
+        }
+        .desc{
+            display:table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+        }
+        .desc:hover{
+            cursor: pointer;
+        }
+        .glyphicon{
+            color:white;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="click">
-        <h2>开启数据之旅</h2>
+    <div class="Navg">
+        <div class="Title_content">
+            <div class="desc"><p class="title">测试数据平台<span class="glyphicon glyphicon-heart"></span> </p></div>
+        </div>
+        <div class="Title_content_two">
+            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+        </div>
+        <div class="Title_content_two">
+            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+        </div>
+        <div class="Title_content_two">
+            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+        </div>
+        <div class="Title_content_two">
+            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+        </div>
+        <div class="Title_content">
+            <div class="desc"><p class="title">测试数据平台<span class="	glyphicon glyphicon-send"></span> </p></div>
+        </div>
+
     </div>
 </div>
 <script>
     $(function () {
-        $(".click").css({"display":"block"});
+        $(".Navg").css({"display":"block"});
         setTimeout(Animation(),2000)
 
     });
-    $(".click").click(function () {
-        window.open("http://v.qq.com","_top")
-    })
+
     function Animation() {
-        $(".click").animate({
-            top:"500px",
-        },5000)
+        $(".Navg").animate({
+            top:"400px",
+        },3000)
     }
 </script>
 </body>
