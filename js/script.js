@@ -48,11 +48,11 @@
 	//
 	var createPie = __webpack_require__(1).createPie;
 	var createLine = __webpack_require__(1).createLine;
-
+	// var enter = require("./create").enter;
 	var echarts = __webpack_require__(2);
 	var $ = __webpack_require__(3);
 	__webpack_require__(5)()
-
+	__webpack_require__(1).enter();
 	//页面初始化时 动态加载DOM，并展现默认数据
 	$(function () {
 		setTimeout(function () {
@@ -260,10 +260,13 @@
 	    };
 	    divdata.setOption(option)
 	}
-
+	function enter() {
+	    alert(1)
+	}
 	module.exports = {
 	    createLine: createLine,
-	    createPie: createPie
+	    createPie: createPie,
+	    enter:enter
 	};
 
 /***/ },
