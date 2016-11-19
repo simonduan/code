@@ -96,16 +96,16 @@ function createLine(divdata,title,title_link,legenddata,timedata,linedata) {
     };
     divdata.setOption(option)
 }
-<<<<<<< HEAD
-function enter() {
-    alert(1)
-}
-module.exports = {
-    createLine: createLine,
-    createPie: createPie,
-    enter:enter
-};
-=======
+// <<<<<<< HEAD
+// function enter() {
+//     alert(1)
+// }
+// module.exports = {
+//     createLine: createLine,
+//     createPie: createPie,
+//     enter:enter
+// };
+// =======
 
 //制作柱状图
 function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
@@ -154,7 +154,8 @@ function Histogram(divdata,title,desc,title_link,Xdata,legenddata,bardata) {
 
         series:bardata
     };
-    divdata.setOption(option)
+    divdata.setOption(option);
+
 }
 //
 // module.exports = {
