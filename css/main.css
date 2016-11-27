@@ -36,7 +36,7 @@
 }
 #div3{
     position: relative;
-    top: 90px;
+    top: 120px;
     height: 300px;
     width: 60%;
     margin: 0 auto;
@@ -45,7 +45,7 @@
 }
 #div4{
     position: relative;
-    top: 120px;
+    top: 90px;
     height: 300px;
     width: 60%;
     margin: 0 auto;
@@ -101,7 +101,7 @@
 }
 /*********表格********/
 .tab{
-    width: 400px;
+    width: 900px;
     height: auto;
     margin:  0 auto;
 }

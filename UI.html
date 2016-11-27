@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bg.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./javascript/jquery2.1.4.min.js"></script>
-    <script src="./javascript/echarts.js"></script>
+    <script src="./javascript/lib/jquery2.1.4.min.js"></script>
+    <script src="./javascript/lib/echarts.js"></script>
     <script src="./javascript/create.js"></script>
 
     <script src="./javascript/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
 
-    <title>Title</title>
+    <title>UI自动化报告</title>
     <style>
         .checked{
             position: relative;
@@ -42,7 +43,7 @@
         }
         #div4_new{
             position: relative;
-            top: 150px;
+            top: 180px;
             height: 300px;
             width: 60%;
             margin: 0 auto;
@@ -64,7 +65,7 @@
 </div>
 <div id="div11">
 
-        <table id="example" class="tab">
+        <table id="example" class="tab" contentEditable="true">
             <thead>
             <tr>
                 <th>项目</th>
@@ -72,44 +73,39 @@
                 <th>失败次数</th>
                 <th>成功率</th>
                 <th>发现bug</th>
-                <th>本月新增</th>
-                <th>延期原因</th>
+
             </tr>
             <tr>
                 <th class="edit"><input type="text" value="Iphone" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
                 <th>20</th>
                 <th>30</th>
                 <th>5%</th>
-                <th>vivo X7</th>
-                <th>url</th>
-                <th>空</th>
+                <th>4</th>
+
             </tr>
             <tr>
                 <th class="edit"><input type="text" value="Android" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
                 <th>20</th>
                 <th>30</th>
                 <th>5%</th>
-                <th>vivo X7</th>
-                <th>url</th>
-                <th>空</th>
+                <th>4</th>
+
             </tr>
             <tr>
                 <th class="edit"><input type="text" value="web" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
                 <th>20</th>
                 <th>30</th>
                 <th>5%</th>
-                <th>vivo X7</th>
-                <th>url</th>
-                <th>空</th>
+                <th>4</th>
+
             </tr>
             <tr>
                 <th class="edit"><input type="text" value="VIP" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
                 <th>20</th>
                 <th>30</th>
                 <th>5%</th>
-                <th>vivo X7</th>
-                <th>url</th>
-                <th>空</th>
+                <th>4</th>
+
             </tr>
 
             </thead>
@@ -119,43 +115,47 @@
     <div id="newdiv1" class="two"></div>
     <div id="newdiv2" class="two"></div>
 </div>
+<div id="div4" style="top: 150px;">
+    <div id="newdiv11" class="two"></div>
+    <div id="newdiv22" class="two"></div>
+</div>
 <div id="div4_new">
-    <table id="example1" class="tab">
+    <table id="example1" class="tab" contentEditable="true">
         <thead>
         <tr>
             <th>项目</th>
             <th>总测试用例</th>
-            <th>web</th>
+            <th>好莱坞</th>
             <th>播放器</th>
-            <th></th>
+
             <th>下载组件</th>
 
         </tr>
         <tr>
             <th class="edit"><input type="text" value="Iphone" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
-            <th>iphone</th>
+            <th>35</th>
             <th>5%</th>
             <th>10%</th>
-            <th>3%</th>
+
             <th>1%</th>
 
         </tr>
         <tr>
             <th class="edit"><input type="text" value="Android" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
-            <th>aphone/th>
+            <th>20</th>
             <th>5%</th>
             <th>10%</th>
-            <th>3%</th>
+
             <th>1%</th>
         </tr>
         <tr>
             <th class="edit"><input type="text" value="web" style='overflow:auto; background-attachment: fixed; background-repeat: no-repeat; border-style:none;' ></th>
-            <th>web</th>
+            <th>25</th>
             <th>20</th>
             <th>5%</th>
             <th>10%</th>
-            <th>3%</th>
-            <th>1%</th>
+
+
         </tr>
 
 
@@ -228,6 +228,39 @@
                     createPie(divdata, dataArry, legenddata, pietitle, piedesc)
 
                 };
+                if (data.datainfo[i].type == "pie" && data.datainfo[i].modules == "ios") {
+
+                var pietitle = data.datainfo[i].title;
+                var piedesc = data.datainfo[i].desc;
+
+                var dataArry = data.datainfo[i].data;
+
+                var legenddata = []
+                for (var j = 0; j < dataArry.length; j++) {
+                    legenddata.push(dataArry[j].name)
+                };
+
+                var divdata = echarts.init(document.getElementById("newdiv11"));
+                createPie(divdata, dataArry, legenddata, pietitle, piedesc)
+
+                };
+                if (data.datainfo[i].type == "pie" && data.datainfo[i].modules == "AndroidOS") {
+
+                    var pietitle = data.datainfo[i].title;
+                    var piedesc = data.datainfo[i].desc;
+
+                    var dataArry = data.datainfo[i].data;
+
+                    var legenddata = []
+                    for (var j = 0; j < dataArry.length; j++) {
+                        legenddata.push(dataArry[j].name)
+                    };
+
+                    var divdata = echarts.init(document.getElementById("newdiv22"));
+                    createPie(divdata, dataArry, legenddata, pietitle, piedesc)
+
+                };
+
 
             };
         }
