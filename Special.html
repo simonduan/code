@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./javascript/jquery2.1.4.min.js"></script>
-    <script src="./javascript/echarts.js"></script>
+    <link rel="stylesheet" href="./css/bg.css">
+    <script src="./javascript/lib/jquery2.1.4.min.js"></script>
+    <script src="./javascript/lib/echarts.js"></script>
     <script src="./javascript/create.js"></script>
     <script src="./javascript/main.js"></script>
     <script src="./javascript/getProductVersion.js"></script>
-    <title>demo.html</title>
+    <title>专项测试结果查看</title>
+    <style>
+        .mail{
+            position: relative;
+            float: right;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
@@ -35,20 +44,49 @@
             <div class="check">
                 <button class="sumbit">查询</button>
             </div>
+
+            <div class="mail">
+                <button>点击跳转邮件发送</button>
+            </div>
         </div>
+
     </div>
     <div class="content">
         <div id="div1" class="echart"></div>
         <div id="div2">
             <div id="div2_1" class="check check_Special">
                 <select id="Special">
-                    <option value="cpu">CPU</option>
-                    <option value="mem">MEM</option>
-                    <option value="power">Power</option>
-                    <option value="Weaknetwork">Weak network</option>
+                    <option value="cpu">专项</option>
+                    <option value="mem">专项1</option>
+                    <option value="power">专项2</option>
+                    <option value="Weaknetwork">专项3</option>
                 </select>
             </div>
             <div id="div2_2" class="echart"></div>
+        </div>
+
+        <div id="div4" class="echart">
+            <div id="div4_0" class="content_head">
+                <select class="build">
+                    <option value="">bulid选择</option>
+                    <option value="build200">build200</option>
+                    <option value="build300">build300</option>
+                    <option value="build400">build400</option>
+                    <option value="build500">build500</option>
+                </select>
+                <select  id="setOver" class="build">
+                    <option value="">阈值设置</option>
+                    <option value="10%">10%</option>
+                    <option value="15%">15%</option>
+                    <option value="20%">20%</option>
+                    <option value="25%">30%</option>
+
+                </select>
+                <div class="title">性能测试</div>
+                <div id="div4_1" class="echart_small"></div>
+                <div id="div4_2" class="echart_small"></div>
+                <div id="div4_3" class="echart_small"></div>
+            </div>
         </div>
         <div id="div3" class="echart">
             <div id="div3_0" class="content_head">
@@ -72,29 +110,6 @@
             <div id="div3_1" class="echart_small"></div>
             <div id="div3_2" class="echart_small"></div>
             <div id="div3_3" class="echart_small"></div>
-        </div>
-        <div id="div4" class="echart">
-            <div id="div4_0" class="content_head">
-                <select class="build">
-                    <option value="">bulid选择</option>
-                    <option value="build200">build200</option>
-                    <option value="build300">build300</option>
-                    <option value="build400">build400</option>
-                    <option value="build500">build500</option>
-                </select>
-                <select  id="setOver" class="build">
-                    <option value="">阈值设置</option>
-                    <option value="10%">10%</option>
-                    <option value="15%">15%</option>
-                    <option value="20%">20%</option>
-                    <option value="25%">30%</option>
-
-                </select>
-                <div class="title">性能测试</div>
-                <div id="div4_1" class="echart_small"></div>
-                <div id="div4_2" class="echart_small"></div>
-                <div id="div4_3" class="echart_small"></div>
-            </div>
         </div>
         <div id="div5" class="echart">
             <div id="div5_0" class="content_head">

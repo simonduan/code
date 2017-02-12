@@ -8,15 +8,15 @@
 // var $ = require("./jquery2.1.4.min");
 // require("./getProductVersion")()
 
-var createPie = require("./create").createPie;
-var createLine = require("./create").createLine;
-// var enter = require("./create").enter;
-var echarts = require("./echarts");
-var $ = require("./jquery2.1.4.min");
-require("./getProductVersion")()
-require("./create").enter();
-
-require("./getProductVersion")()
+// var createPie = require("./create").createPie;
+// var createLine = require("./create").createLine;
+// // var enter = require("./create").enter;
+// var echarts = require("./echarts");
+// var $ = require("./jquery2.1.4.min");
+// require("./getProductVersion")()
+// require("./create").enter();
+//
+// require("./getProductVersion")()
 
 
 //页面初始化时 动态加载DOM，并展现默认数据

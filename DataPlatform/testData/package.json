@@ -16,11 +16,11 @@ jsonp1({
 							type: 'line',
 							data: [0.1,0.2,0.25,0.13]
 						},
-						{
-							name: 'build300',
-							type: 'line',
-							data: [0.15,0.1,0.30,0.2]
-						}
+//						{
+//							name: 'build300',
+//							type: 'line',
+//							data: [0.15,0.1,0.30,0.2]
+//						}
 					]
 			},
 			{
@@ -35,15 +35,15 @@ jsonp1({
 							type: 'line',
 							data: [0.3,0.4,0.55,0.13]
 						},
-						{
-							name: 'build300',
-							type: 'line',
-							data: [0.15,0.21,0.32,0.2]
-						}
+//						{
+//							name: 'build300',
+//							type: 'line',
+//							data: [0.15,0.21,0.32,0.2]
+//						}
 				]
 			},
 			{
-				title:"FPS走势图",
+				title:"内存走势图",
 				link:"http://tapd.oa.com/",
 				type:"line",
 				modules:"FPS",
@@ -54,11 +54,6 @@ jsonp1({
 							type: 'line',
 							data: [0.3,0.4,0.55,0.13]
 						},
-						{
-						name: 'build300',
-						type: 'line',
-						data: [0.15,0.21,0.32,0.2]
-						}
 
 				]
 			},
@@ -102,44 +97,14 @@ jsonp1({
 
 				]
 			},
-			{
-				title: "iphone系统占比",
-				type:"pie",
-				modules:"ios",
-				data:[
-				{value: 4, name: "ios7"},
-				{value: 2, name: "ios8"},
-				{value: 2, name: "ios9"},
-				{value: 1, name: "ios10"}
-
-				]
-			},
-			{
-				title: "Android系统占比",
-				type:"pie",
-				modules:"AndroidOS",
-				data:[
-				{value: 4, name: "Android5.0"},
-				{value: 2, name: "Android4.4.4"},
-				{value: 2, name: "Android6.0"},
-				{value: 1, name: "其他"}]
-			},
-
-
-
-
-
-
-
-
-			//柱状图数据
+							//柱状图数据
 			{
 							title:"专项测试",
 							desc:"不同专项在最近两次构建的质量",
 							type:"bar",
 							modules:"Special",
 							link:"http://tapd.oa.com/",
-							Xdata:["性能测试","内存泄漏","专项测试1","专项测试2"],
+							Xdata:["CPU","MEM","Power","Network"],
 							data:[
 									{
 										name:'4.5.0',
@@ -155,8 +120,8 @@ jsonp1({
 							]
 			},
 			{
-							title:"CPU指标",
-							desc:"首次打开，二次打开",
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
 							type:"bar",
 							link:"http://tapd.oa.com/",
 							modules:"CPU",
@@ -166,51 +131,36 @@ jsonp1({
 										name:"bulid254",
 										type:"bar",
 										data:[0.12,0.25,0.5,0.1]
-									},
-									{
-									name:"bulid255",
-									type:"bar",
-									data:[0.02,0.15,0.3,0.41]
 									}
 							]
 			},
 			{
-							title:"内存指标",
-							desc:"默认当前最新",
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
 							type:"bar",
 							link:"http://tapd.oa.com/",
 							modules:"MEM",
 							Xdata:["场景1","场景2","场景3","场景4",],
 							data:[
 									{
-									name:"bulid255",
-									type:"bar",
-									data:[0.1,0.25,0.15,0.3]
-									},
-									{
 									name:"bulid254",
 									type:"bar",
-									data:[0.32,0.15,0.1,0.05]
+									data:[0.1,0.25,0.15,0.3]
 									}
 							]
 			},
 			{
-							title:"FPS",
-							desc:"点击查看的更多",
+							title:"性能测试",
+							desc:"此展示为平均值，默认展示最新build",
 							type:"bar",
 							link:"http://tapd.oa.com/",
 							modules:"FPS",
-							Xdata:["场景1","场景2","场景3","场景4"],
+							Xdata:["场景1","场景2","场景3","场景4",],
 							data:[
 									{
 										name:"bulid254",
 										type:"bar",
 										data:[0.13,0.35,0.15,0.1]
-									},
-									{
-									name:"bulid255",
-									type:"bar",
-									data:[0.12,0.25,0.5,0.1]
 									}
 							]
 			},
@@ -223,14 +173,14 @@ jsonp1({
 							Xdata:["第一次启动","第二次启动"],
 							data:[
 									{
-										name:"bulid255",
+										name:"bulid254",
 										type:"bar",
-										data:[33,12]
+										data:[5,3]
 									},
 									{
 									name:"bulid254",
 									type:"bar",
-									data:[4,15]
+									data:[4,6]
 									}
 							]
 			}
