@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>demo.html</title>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script>
+        $(function () {
+            $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'My first Highcharts chart'
+                },
+                xAxis: {
+                    categories: ['苹果', '香蕉', '橙子']   //指定x轴分组
+                },
+                yAxis: {
+                    title: {
+                        text: 'something'
+                    }
+                },
+                series: [{                                //指定数据列
+                    name: '小明',                          //数据列名
+                    data: [1, 0, 4]                        //数据
+                }, {
+                    name: '小红',
+                    data: [5, 7, 3]
+                }]
+            });
+        });
+    </script>
 </head>
+
 <body>
-<div id="container">
-    <div class="head">
-        <div id="retrieval">
-            <div class="check check_product">
-                <select id="product">
-                    <option value="iphone">iphone</option>
-                    <option value="android" selected="selected">android</option>
-                    <option value="iPad">iPad</option>
-                    <option value="tv">TV</option>
-                    <option value="web">web</option>
-                </select>
-            </div>
-            <div class="check check_bulid">
-                <select id="version">
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-
-                </select>
-            </div>
-            <div class="check check_product">
-                <button class="sumbit">查询</button>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div id="div1" class="echart"></div>
-        <div id="div2" class="echart"></div>
-        <div id="div3" class="echart"></div>
-        <div id="div4" class="echart"></div>
-        <div id="div5" class="echart"></div>
-    </div>
-</div>
-<script src="./js/lib.js"></script>
-<script src="./js/script.js"></script>
+<div id="container" style="min-width:800px;height:400px;"></div>
 </body>
-
 </html>
