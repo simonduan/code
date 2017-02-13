@@ -9,17 +9,17 @@ jsonp1({
 				link:"http://tapd.oa.com/",
 				type:"line",
 				modules:"MEM",
-				time:["场景1","场景2","场景3","场景4"],
+				time:["PC客户端","WEB","离线包+未分类bug","H5","iPad","外网"],
 				data:[
 						{
-							name: 'build200',
+							name: '2016上半年',
 							type: 'line',
-							data: [0.1,0.2,0.25,0.13]
+							data: [93,176,723,310,23,71]
 						},
 						{
-							name: 'build300',
+							name: '2016下半年',
 							type: 'line',
-							data: [0.15,0.1,0.30,0.2]
+							data: [153,138,439,109,63]
 						}
 					]
 			},
@@ -134,22 +134,22 @@ jsonp1({
 
 			//柱状图数据
 			{
-							title:"专项测试",
-							desc:"不同专项在最近两次构建的质量",
+							title:"整体项目质量",
+//							desc:"整体项目质量",
 							type:"bar",
 							modules:"Special",
 							link:"http://tapd.oa.com/",
-							Xdata:["性能测试","内存泄漏","专项测试1","专项测试2"],
+							Xdata:["PC客户端","WEB","离线包+未分类bug","H5","iPad","外网"],
 							data:[
 									{
-										name:'4.5.0',
+										name:'2016上',
 										type:'bar',
-										data:["2","4","3","5"]
+										data:[93,176,723,310,23,71]
 									},
 									{
-										name:'4.6.0',
+										name:'2016下',
 										type:'bar',
-										data:["3","7","2","1"]
+										data:[153,138,1391,439,109,63]
 									}
 
 							]

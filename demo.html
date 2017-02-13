@@ -1,47 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE HTML>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>demo.html</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Tencent-TGideas">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=320,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="Copyright" content="Copyright (c) 2006-2016 TENCENT"/>
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <title>致每一个被光影打动过的你</title>
+    <style>
+        #hit{width: 100%;height:100%; opacity:0;z-index: 11;display: none; position:absolute;background-color: #000000;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);}
+        html, body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #000000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }
+    </style>
 </head>
 <body>
-<div id="container">
-    <div class="head">
-        <div id="retrieval">
-            <div class="check check_product">
-                <select id="product">
-                    <option value="iphone">iphone</option>
-                    <option value="android" selected="selected">android</option>
-                    <option value="iPad">iPad</option>
-                    <option value="tv">TV</option>
-                    <option value="web">web</option>
-                </select>
-            </div>
-            <div class="check check_bulid">
-                <select id="version">
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-                    <option value="">版本号1</option>
-
-                </select>
-            </div>
-            <div class="check check_product">
-                <button class="sumbit">查询</button>
-            </div>
-        </div>
+<div style="position: absolute;">
+    <div style="position: absolute;">
+        <video id="video" style="display:none;"></video>
     </div>
-    <div class="content">
-        <div id="div1" class="echart"></div>
-        <div id="div2" class="echart"></div>
-        <div id="div3" class="echart"></div>
-        <div id="div4" class="echart"></div>
-        <div id="div5" class="echart"></div>
-    </div>
+    <button id="hit"></button>
+    <canvas id="canvas"  style="display:block;position:relative;overflow: hidden;"></canvas>
 </div>
-<script src="./js/lib.js"></script>
-<script src="./js/script.js"></script>
-</body>
+<script src="bin/preloadjs-0.6.1_quanchenChange.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var actName = 'a20160917fbh';//点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+</script>
+<script src="bin/AV.analytics.js"></script>
+<script src="bin/app.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/dcv/ww_tcss.js"></script>
+<script>if (typeof(pgvMain) == 'function') pgvMain();//点击流统计;</script>
+<script src="http://ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script>
 
+    //分享
+    TGMobileShare({
+        //不设置或设置为空时，页面有title，则调取title
+        shareTitle: '致每一个被光影打动过的你',
+        //不设置或设置为空时，页面有Description，则调取Description
+        shareDesc: '我们看过的有很多，但还没看到的，更多。',
+        //分享图片尺寸200*200，大小控制在10k左右，且填写绝对路径
+        shareImgUrl: 'http://game.gtimg.cn/images/game/act/a20160917fbh/images/share.jpg',
+        //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+        shareLink: 'http://game.qq.com/act/a20160917fbh/index.html?ADTAG=cop.innercop.client.share',
+        //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+        actName: actName
+    });
+
+    function gotoPage(arg)//canvas->js,按钮点击事件,参数为按钮标识符;
+    {
+        console.log('gotoPage:', arg);
+        alert(arg);
+        switch (arg)
+        {
+            case 'download'://下载游戏;
+
+                break;
+            case 'get'://获取游戏礼包;
+
+                break;
+        }x.
+    }
+</script>
+<script src="http://ossweb-img.qq.com/images/js/PCPrompt/PCPrompt.min.js" charset="gbk"></script>
+<script>
+    new K_PCPrompt({
+        url:'http://game.qq.com/act/a20160917fbh/index.html?ADTAG=a20160917fbh.pc.qr',
+        title:'致每一个被光影打动过的人',
+        description:'我们看过的很多\r但还没看到的，更多',
+        preview:'http://game.gtimg.cn/images/game/act/a20160917fbh/images/pcqr.jpg'
+    });
+</script>
+<!--<h1 id="testmsg" style="position: absolute;color:#fff1ae">fff</h1>-->
+<script src="http://10.30.106.80:8080/target/target-script-min.js#anonymous"></script>
+</body>
 </html>
